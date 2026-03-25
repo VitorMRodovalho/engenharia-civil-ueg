@@ -1,0 +1,164 @@
+<?xml version="1.0" encoding="iso-8859-1"?>
+<mosinstall type="component" version="4.5.2">
+	<name>FacileForms</name>
+	<creationDate>September 2006</creationDate>
+	<author>Peter Koch</author>
+	<copyright>This mambo component is released under the GNU/GPL license</copyright>
+	<authorEmail>use_the_forum@facileforms.biz</authorEmail>
+	<authorUrl>www.facileforms.biz</authorUrl>
+	<version>1.4.7</version>
+	<description>
+		&lt;h2&gt;FacileForms component: Enhanced form design tool&lt;/h2&gt;
+		&lt;p&gt;Please click on &lt;code&gt;Continue&lt;/code&gt; to conclude the first step
+		of FacileForms installation now.&lt;/p&gt;&lt;p&gt;
+		Next find FacileForms in the &lt;code&gt;Components&lt;/code&gt; menu, and click on
+		&lt;code&gt;Confiruration&lt;/code&gt; to continue with step 2 of the installation
+		process.&lt;/p&gt;
+	</description>
+	<files>
+		<filename>index.html</filename>
+		<filename>facileforms.php</filename>
+		<filename>facileforms.js</filename>
+		<filename>facileforms.xml.php</filename>
+		<filename>facileforms.class.php</filename>
+		<filename>facileforms.process.php</filename>
+		<filename>markdown.php</filename>
+		<filename>secimage.php</filename>
+		<filename>languages/index.html</filename>
+		<filename>languages/english.php</filename>
+		<filename>languages/german.php</filename>
+		<filename>languages/germanf.php</filename>
+		<filename>languages/germani.php</filename>
+		<filename>exports/index.html</filename>
+		<filename>uploads/index.html</filename>
+		<filename>images/index.html</filename>
+		<filename>images/pizzashop/index.html</filename>
+		<filename>images/pizzashop/delivery.jpg</filename>
+		<filename>images/pizzashop/design.jpg</filename>
+		<filename>images/pizzashop/lights.jpg</filename>
+		<filename>images/pizzashop/margherita.jpg</filename>
+		<filename>images/pizzashop/quattro.jpg</filename>
+	</files>
+	<uninstall>
+		<queries>
+			<query>
+				delete from `#__components`
+				where `option` = 'com_facileforms'
+				and (
+					(admin_menu_link like 'option=com_facileforms&amp;act=run%')
+					or
+					(admin_menu_link='' and link='')
+				)
+			</query>
+		</queries>
+	</uninstall>
+	<administration>
+		<menu>FacileForms</menu>
+		<submenu>
+			<menu act="managerecs">Manage Records</menu>
+			<menu act="managemenus">Manage Backend Menus</menu>
+			<menu act="manageforms">Manage Forms</menu>
+			<menu act="managescripts">Manage Scripts</menu>
+			<menu act="managepieces">Manage Pieces</menu>
+			<menu act="configuration">Configuration</menu>
+		</submenu>
+		<files>
+			<filename>index.html</filename>
+			<filename>admin.facileforms.php</filename>
+			<filename>toolbar.facileforms.html.php</filename>
+			<filename>toolbar.facileforms.php</filename>
+		</files>
+		<images>
+			<filename>admin/index.html</filename>
+			<filename>admin/areautils.js</filename>
+			<filename>admin/config.class.php</filename>
+			<filename>admin/config.html.php</filename>
+			<filename>admin/config.php</filename>
+			<filename>admin/download.php</filename>
+			<filename>admin/element.class.php</filename>
+			<filename>admin/element.html.php</filename>
+			<filename>admin/element.php</filename>
+			<filename>admin/form.class.php</filename>
+			<filename>admin/form.html.php</filename>
+			<filename>admin/form.php</filename>
+			<filename>admin/import.class.php</filename>
+			<filename>admin/install.class.php</filename>
+			<filename>admin/install.html.php</filename>
+			<filename>admin/install.php</filename>
+			<filename>admin/menu.class.php</filename>
+			<filename>admin/menu.html.php</filename>
+			<filename>admin/menu.php</filename>
+			<filename>admin/piece.class.php</filename>
+			<filename>admin/piece.html.php</filename>
+			<filename>admin/piece.php</filename>
+			<filename>admin/record.class.php</filename>
+			<filename>admin/record.html.php</filename>
+			<filename>admin/record.php</filename>
+			<filename>admin/run.php</filename>
+			<filename>admin/script.class.php</filename>
+			<filename>admin/script.html.php</filename>
+			<filename>admin/script.php</filename>
+			<filename>languages/index.html</filename>
+			<filename>languages/admin.english.php</filename>
+			<filename>languages/admin.german.php</filename>
+			<filename>languages/admin.germanf.php</filename>
+			<filename>languages/admin.germani.php</filename>
+			<filename>packages/index.html</filename>
+			<filename>packages/samples.english.xml</filename>
+			<filename>packages/stdlib.english.xml</filename>
+			<filename>packages/oldlib.english.xml</filename>
+			<filename>sql/index.html</filename>
+			<filename>sql/create.sql</filename>
+			<filename>sql/upgrade_1.1.sql</filename>
+			<filename>sql/upgrade_1.2.sql</filename>
+			<filename>sql/upgrade_1.3.sql</filename>
+			<filename>sql/upgrade_1.4.sql</filename>
+			<filename>images/index.html</filename>
+			<filename>images/icons/index.html</filename>
+			<filename>images/icons/close_x.png</filename>
+			<filename>images/icons/download.png</filename>
+			<filename>images/icons/download_f2.png</filename>
+			<filename>images/icons/keys.png</filename>
+			<filename>images/icons/keys_f2.png</filename>
+			<filename>images/icons/movedn.png</filename>
+			<filename>images/icons/movedn_f2.png</filename>
+			<filename>images/icons/movelt.png</filename>
+			<filename>images/icons/movelt_f2.png</filename>
+			<filename>images/icons/movert.png</filename>
+			<filename>images/icons/movert_f2.png</filename>
+			<filename>images/icons/moveup.png</filename>
+			<filename>images/icons/moveup_f2.png</filename>
+			<filename>images/icons/print.png</filename>
+			<filename>images/icons/print_f2.png</filename>
+			<filename>images/icons/query.png</filename>
+			<filename>images/icons/query_f2.png</filename>
+			<filename>images/icons/register.png</filename>
+			<filename>images/icons/register_f2.png</filename>
+			<filename>images/icons/switch.png</filename>
+			<filename>images/icons/switch_f2.png</filename>
+		</images>
+	</administration>
+	<params name="ff_com_params" description="FacileForms - Parameter settings">
+		<param name="ff_com_name" type="text" default="" label="Form name" description="Enter the name of the form here" />
+		<param name="ff_com_page" type="text" default="1" label="Page number" description="Enter the starting page number here" />
+		<param name="ff_com_frame" type="radio" default="0" label="Run in iframe" description="Run the form in an iframe">
+			<option value="0">No</option>
+			<option value="1">Yes</option>
+		</param>
+		<param name="ff_com_border" type="radio" default="0" label="Border" description="Select if border is displayed">
+			<option value="0">No</option>
+			<option value="1">Yes</option>
+		</param>
+		<param name="ff_com_align" type="list" default="1" label="Horizontal align" description="Choose the horizontal align here">
+			<option value="0">Left</option>
+			<option value="1">Center</option>
+			<option value="2">Right</option>
+			<option value="3">Position</option>
+		</param>
+		<param name="ff_com_left" type="text" default="0" label="Left position (pixels)" description="Left position in pixels (when Horizontal align=Position)" />
+		<param name="ff_com_top" type="text" default="0" label="Top position (pixels)" description="Top position in pixels" />
+		<param name="ff_com_parprv" type="text" default="" label="Private parameters" description="Parameters private to main form. Example: &amp;ff_param_foo=bar&amp;ff_param_xy=123" />
+		<param name="ff_com_parpub" type="text" default="" label="Public parameters" description="Parameters inherited by subforms. Example: &amp;ff_param_foo=bar&amp;ff_param_xy=123" />
+		<param name="ff_com_suffix" type="text" default="" label="CSS class suffix" description="Suffix to append to every CSS class name" />
+	</params>
+</mosinstall>

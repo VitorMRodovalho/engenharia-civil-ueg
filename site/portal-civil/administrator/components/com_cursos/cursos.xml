@@ -1,0 +1,79 @@
+<?xml version="1.0"?>
+ <mosinstall type="component">
+  <name>Cursos</name>
+  <creationDate>17/05/2005</creationDate>
+  <author>Oton de Oliveira</author>
+  <copyright>Sygmund 2005</copyright>
+  <authorEmail>mail@oton.pro.br</authorEmail>
+  <authorUrl>http://oton.pro.br</authorUrl>
+  <version>1.0 beta</version>
+  <description>Cadastro de cursos e oficinas.</description>
+  <files>
+   <filename>cursos.php</filename>
+   <filename>cursos.class.php</filename>
+   <filename>cursos.html.php</filename>
+   <filename>GridDraw.js</filename>
+   <filename>GridSort.js</filename>
+  </files>
+  <install>
+   <queries>
+	<query>
+	 DROP TABLE IF EXISTS `#__cursos` 
+	</query>
+    <query>     CREATE TABLE `#__cursos` (
+     `id` INT NOT NULL AUTO_INCREMENT,
+     `sid` INT NOT NULL,
+     `catid` INT NOT NULL,
+     `date` DATETIME,
+     `ordering` INT NOT NULL,
+     `checked_out` INT NOT NULL,
+     `checked_out_time` DATETIME,
+     `state` TINYINT(1) NOT NULL,
+     `published` TINYINT(1) NOT NULL,
+ 		`Curso` VARCHAR(50),
+ 		`Inicia` DATE,
+ 		`Termina` DATE,
+ 		`Ministrado` VARCHAR(50),
+ 		`Local` VARCHAR(50),
+ 		`Valor` VARCHAR(20),
+ 		`Pagamento` VARCHAR(50),
+ 		`Vagas` VARCHAR(50),
+ 		`InscreveEm` VARCHAR(50),
+ 		`Descreve` TEXT,
+     PRIMARY KEY (id))
+    </query> 
+    <query>
+        INSERT INTO `#__categories`
+          (`title`, `name`, `section`, `image_position`, `description`, `published`, `checked_out`, `checked_out_time`, `editor`, `ordering`, `access`, `count`) VALUES
+          ('Cursos', 'Cursos', 'com_cursos', 'left', 'Cursos Categories.', 1, 0, '0000-00-00 00:00:00', NULL, 1, 0, 0);
+      </query>
+   </queries>
+  </install>
+  <uninstall>
+   <queries>
+    <query>
+     DROP TABLE `#__cursos`
+   </query>   
+	 <query>DELETE FROM `#__categories` WHERE `section` = 'com_cursos'</query>
+   </queries>
+  </uninstall>
+  <installfile>install.cursos.php</installfile>
+  <uninstallfile>uninstall.cursos.php</uninstallfile>
+  <administration>
+   <menu>Cursos</menu>
+   <submenu>
+    <menu act="all">Cursos Items</menu>
+    <menu link="option=categories&amp;section=com_cursos">Cursos Categories</menu>
+    <menu link="option=com_cursos&amp;task=showarchive">Cursos Archives</menu>
+   </submenu>
+   <files>
+    <filename>admin.cursos.php</filename>
+    <filename>install.cursos.php</filename>
+    <filename>uninstall.cursos.php</filename>
+	<filename>admin.cursos.html.php</filename>
+	<filename>cursos.class.php</filename>
+	<filename>toolbar.cursos.php</filename>
+	<filename>toolbar.cursos.html.php</filename>
+   </files>
+  </administration>
+ </mosinstall>

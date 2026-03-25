@@ -1,0 +1,21 @@
+# OS files
+Thumbs.db
+.DS_Store
+Desktop.ini
+
+# FTP artifacts
+.ftpquota
+
+# Joomla cache
+cache/cache_*
+cache/*.xml
+!cache/index.html
+
+# Temporary files
+*.tmp
+*.bak
+*.swp
+*~
+
+# Sensitive files that should never be committed
+configuration.php

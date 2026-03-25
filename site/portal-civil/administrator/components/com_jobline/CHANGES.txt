@@ -1,0 +1,152 @@
+Oct 28, 2006
+    - NEW: Updated the Turkish language file.
+    - Minor release: v1.1.2.2
+
+Oct 27, 2006
+    - FIX: Job description wasn't handled properly when editing posts.
+    - Bug fix release: v1.1.2.1
+
+Oct 21, 2006
+    - NEW: Added Turkish language file sent in by Onur Bilgiç.
+    - NEW: Added German (formal and informal) language files sent in by amarok
+    - NEW: Portuguese language file added, sent in by Helder Lopes.
+    - NEW: Dutch language file updated, sent in by Steven Trooster.
+    - FIX: Added css class 'button' to apply button.
+    - FIX: Changed the upgrade instructions.
+    - NEW: Removed some references to Mambo in a couple of files.
+    - NEW: Jobline database table is no longer removed on deinstallation.
+    - NEW: Updated links to the support site.
+    - FIX: Fixed a possible problem with the page navigation links in new versions of Joomla.
+    - NEW: Updated the script to work with Joomla 1.5 beta (using legacy mode).
+    - Maintenence release: v1.1.2 
+
+Oct 29, 2005
+    - Added configuration option to turn off html editor for frontend.
+    - Added configuration option for width and height of html editor.
+    - Added configuration option to initialize html editor for non-registered users.
+    - Updated wysiwyg editor code to be properly used in templates.
+    - Fixed a bug where the wysiwyg editor wasn't properly initialized in Joomla 1.0.3.
+    - Maintenence release: v1.1.1
+
+Sep 7, 2005
+    - BUGFIX: Prints original error even if error template can't be found.
+    - BUGFIX: Fixed template bug with application email.
+    - BUGFIX: Search link and post job show up even when the list is empty.
+    - BUGFIX: Russian language file wasn't installed.
+    - BUGFIX: US State wasn't added properly in application email.
+    - Moved language string "New!" from listitem templates to the language file.
+    - Added Spanish language file sent in by Cristobal Dominguez.
+    - Added polish language file sent in by Tomasz Z. Napierala.
+    - Added Brazilian Portuguese language file sent in by Bruno Carvalho Castro Souza.
+    - Added Norwegian language file sent in by Øystein Efterdal, thank you!
+    - Added German Formal language file sent in by Christoph Lemmer.
+    - Released v1.1 Stable.
+
+Feb 20, 2005
+    - Updated the readme with better upgrade instructions, information about template
+      system and new configuration options and the new fields for job postings.
+    - Updated the TODO and removed old information, and made a possible roadmap.
+    - Released v1.1 beta.
+
+Feb 19, 2005
+    - New config option to change date format, uses language default if left empty.
+    - Customized fields now work when adding jobs from the frontend as well.
+    - Uses html editor for description if it is configured in Mambo.
+    - Multiple sets of templates can be used, default and simple templates included.
+    - Created templates for all output, except job posting.
+    - Configuration option to auto approve job postings added.
+    - Added access rights field to job postings.
+    - Added access level restriction on who can post jobs.
+    - Restructured the administrator edit page.
+    - BUGFIX: Admin listing of job postings are limited to set # of items to display.
+    - Added listing and editing of template files.
+
+Feb 16, 2005
+    - BUGFIX: Expired job postings counted towards the total in pagenavs. Thanks to Jay Blackwood for finding this.
+
+Feb 7, 2005
+    - Hits are recorded on items when they are viewed.
+
+Feb 6, 2005
+    - US State drop-down for job location if "Show US states
+      drop-down" configuration setting is set to "yes". 
+    - Added a few fields to the search method in jobline.class.php
+    - Finished the code for simple customization of fields for job postings.
+
+Feb 3, 2005
+    - Added a dutch language file. Translated by Dominique.
+
+Feb 1, 2005
+    - Added option to show items as new if they've been created in the
+      last X days (configurable). 
+
+Jan 26, 2005
+    - Added config option to disallow users from adding job postings.
+
+Jan 25, 2005
+    - Added templates for application form an email.
+    - Added more fields to application letter.
+    - Added links to order job posting list by different headings.
+    - Fixed a bug with PHP notices on the search results page.
+
+Jan 21, 2005
+    - Added three new fields: reference, location and duration.
+    - Fixed a bug so that application link won't show if there is no contact email.
+
+Jan 19, 2005
+    - Added option to use email link for job application instead of application form.
+    - Wrote template system for html output.
+
+Dec 26, 2004
+    - Fixed a bug causing the search to only search full-time jobs if
+      no type was specified in the url. 
+
+Dec 24, 2004
+    - Jobline now makes use of the new mailer function in Mambo 4.5.1 if it
+      exists.
+
+Dec 1, 2004
+    - Added configuration option to select default value of Job Status drop-down.
+
+Nov 23, 2004
+    - Changed the database to save up to 10 characters of the state abbreviation.
+
+Nov 23, 2004
+    - Translated all language strings into Swedish.
+    - Released 1.0.3
+
+Nov 16, 2004
+    - Added Russian language file sent in by Alexander Kozlov.
+
+Nov 13, 2004
+    - Added Italian language file sent in by Vittorio Docente.
+
+Nov 11, 2004
+    - Fixed saving of Credit Card expiration date.
+    - If type=internship is set in URL, "Job Posting" is replaced with
+      "Internship" when listing items. 
+    - Released 1.0.2
+
+Oct 10, 2004
+    - Added french translation by Jean-Christophe Boussion.
+
+Oct 5, 2004
+    - Added config option to remove US State from address.
+    - Wrote upgrade instructions.
+    - Added job status field (thanks Christiaan van Woudenberg!)
+
+Oct 2, 2004
+    - Fixed the component so that it works with Mambo 4.5.1
+
+Sep 18, 2004
+    - Small fix to make the script work even with a state field added to the mos_users table.
+    - Fixed printing of selected US state.
+    - Released v1.0.1
+ 
+Sep 16, 2004
+    - Added config option to remove credit card information from Job Posting creation form.
+    - Wrote usage instructions.
+    - Released v1.0
+
+Aug 4, 2004
+    - All administrator pages finished.

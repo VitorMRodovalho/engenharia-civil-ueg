@@ -1,0 +1,458 @@
+<?xml version="1.0" ?>
+
+<mosinstall type="component">
+    <name>ReMOSitory</name>
+    <creationDate>19 June 2007</creationDate>
+    <author>Martin Brampton and team</author>
+    <copyright>This edition of Remository is released under the GNU/GPL License, copyright Black Sheep Research</copyright>
+    <authorEmail>martin@remository.com</authorEmail>
+    <authorUrl>www.remository.com</authorUrl>
+    <version>3.42</version>
+    <description>Mambo/Joomla File Download Repository</description>
+    <files>
+        <filename>remository.php</filename>
+        <filename>remository.class.php</filename>
+        <filename>remository.html.php</filename>
+        <filename>remository.css</filename>
+        <filename>remository.utilities.php</filename>
+        <filename>remository.interface.php</filename>
+        <filename>sef_ext.php</filename>
+        <filename>sef.custom.php</filename>
+		<filename>com_remository_settings.php</filename>
+		<filename>com_remository_constants.php</filename>
+		<filename>p-classes/remositoryComment.php</filename>
+		<filename>p-classes/remositoryContainer.php</filename>
+		<filename>p-classes/remositoryContainerManager.php</filename>
+		<filename>p-classes/remositoryDirectory.php</filename>
+		<filename>p-classes/remositoryFile.php</filename>
+		<filename>p-classes/remositoryGroup.php</filename>
+		<filename>p-classes/remositoryLogEntry.php</filename>
+		<filename>p-classes/remositoryPhysicalFile.php</filename>
+		<filename>p-classes/remositoryRepository.php</filename>
+		<filename>p-classes/remositoryTempFile.php</filename>
+		<filename>p-classes/remositoryThumbnails.php</filename>
+		<filename>p-classes/remositoryUser.php</filename>
+		<filename>c-classes/remository_addfile_Controller.php</filename>
+		<filename>c-classes/remository_addmanyfiles_Controller.php</filename>
+		<filename>c-classes/remository_download_Controller.php</filename>
+		<filename>c-classes/remository_fileinfo_Controller.php</filename>
+		<filename>c-classes/remository_rss_Controller.php</filename>
+		<filename>c-classes/remository_savefile_Controller.php</filename>
+		<filename>c-classes/remository_savemanyfiles_Controller.php</filename>
+		<filename>c-classes/remository_savethumb_Controller.php</filename>
+		<filename>c-classes/remository_search_Controller.php</filename>
+		<filename>c-classes/remository_select_Controller.php</filename>
+		<filename>c-classes/remository_thumbupdate_Controller.php</filename>
+		<filename>c-classes/remository_userupdate_Controller.php</filename>
+		<filename>v-classes/remositoryAddFileDoneHTML.php</filename>
+		<filename>v-classes/remositoryAddFileHTML.php</filename>
+		<filename>v-classes/remositoryAddManyFilesDoneHTML.php</filename>
+		<filename>v-classes/remositoryAddManyFilesHTML.php</filename>
+		<filename>v-classes/remositoryDownloadAgreeHTML.php</filename>
+		<filename>v-classes/remositoryFileInfoHTML.php</filename>
+		<filename>v-classes/remositoryFileListHTML.php</filename>
+		<filename>v-classes/remositoryLoginHTML.php</filename>
+		<filename>v-classes/remositorySearchBoxHTML.php</filename>
+		<filename>v-classes/remositorySearchResultsHTML.php</filename>
+		<filename>v-classes/remositoryThumbUpdateHTML.php</filename>
+		<filename>c-admin-classes/remositoryAdminAddstructure.php</filename>
+		<filename>c-admin-classes/remositoryAdminConfig.php</filename>
+		<filename>c-admin-classes/remositoryAdminContainers.php</filename>
+		<filename>c-admin-classes/remositoryAdminCounts.php</filename>
+		<filename>c-admin-classes/remositoryAdminDbconvert.php</filename>
+		<filename>c-admin-classes/remositoryAdminDbconvert2.php</filename>
+		<filename>c-admin-classes/remositoryAdminDownloads.php</filename>
+		<filename>c-admin-classes/remositoryAdminFiles.php</filename>
+		<filename>c-admin-classes/remositoryAdminFtp.php</filename>
+		<filename>c-admin-classes/remositoryAdminGroups.php</filename>
+		<filename>c-admin-classes/remositoryAdminMissing.php</filename>
+		<filename>c-admin-classes/remositoryAdminPrune.php</filename>
+		<filename>c-admin-classes/remositoryAdminStats.php</filename>
+		<filename>c-admin-classes/remositoryAdminThumbs.php</filename>
+		<filename>c-admin-classes/remositoryAdminUnlinked.php</filename>
+		<filename>c-admin-classes/remositoryAdminUploads.php</filename>
+		<filename>v-admin-classes/editContainersHTML.php</filename>
+		<filename>v-admin-classes/editFilesHTML.php</filename>
+		<filename>v-admin-classes/HTML_MBTGroups.php</filename>
+		<filename>v-admin-classes/listAboutHTML.php</filename>
+		<filename>v-admin-classes/listAddstructureHTML.php</filename>
+		<filename>v-admin-classes/listConfigHTML.php</filename>
+		<filename>v-admin-classes/listCpanelHTML.php</filename>
+		<filename>v-admin-classes/listContainersHTML.php</filename>
+		<filename>v-admin-classes/listFilesHTML.php</filename>
+		<filename>v-admin-classes/listFtpHTML.php</filename>
+		<filename>v-admin-classes/listMissingFilesHTML.php</filename>
+		<filename>v-admin-classes/listPruneHTML.php</filename>
+		<filename>v-admin-classes/listStatsHTML.php</filename>
+		<filename>v-admin-classes/listSupportHTML.php</filename>
+		<filename>v-admin-classes/listUnlinkedHTML.php</filename>
+		<filename>v-admin-classes/listUploadsHTML.php</filename>
+		<filename>language/english.php</filename>
+		<filename>language/arabic.php</filename>
+		<filename>language/brazilian_portuguese.php</filename>
+		<filename>language/bulgarian.php</filename>
+		<filename>language/czech.php</filename>
+		<filename>language/dutch.php</filename>
+		<filename>language/finnish.php</filename>
+		<filename>language/french.php</filename>
+		<filename>language/germani.php</filename>
+		<filename>language/germanf.php</filename>
+		<filename>language/greek.php</filename>
+		<filename>language/hungarian.php</filename>
+		<filename>language/lithuanian.php</filename>
+		<filename>language/norwegian.php</filename>
+		<filename>language/polish.php</filename>
+		<filename>language/portuguese.php</filename>
+		<filename>language/russian.php</filename>
+		<filename>language/spanish.php</filename>
+		<filename>language/simplified_chinese.php</filename>
+		<filename>language/traditional_chinese.php</filename>
+		<filename>index.html</filename>
+    </files>
+    <images>
+        <filename>images/add_file.gif</filename>
+		<filename>images/approve.png</filename>
+		<filename>images/approve_f2.png</filename>
+		<filename>images/back.gif</filename>
+		<filename>images/blank.gif</filename>
+		<filename>images/calendar.gif</filename>
+		<filename>images/download_trans.gif</filename>
+		<filename>images/edit.gif</filename>
+		<filename>images/email.png</filename>
+		<filename>images/gohome.gif</filename>
+		<filename>images/header.gif</filename>
+		<filename>images/home.gif</filename>
+		<filename>images/feed-icon-32x32.gif</filename>
+		<filename>images/search.gif</filename>
+		<filename>images/star.gif</filename>
+		<filename>images/stuff1.gif</filename>
+		<filename>images/folder_icons/folder_blue.gif</filename>
+		<filename>images/folder_icons/folder_blue_docs.gif</filename>
+		<filename>images/folder_icons/folder_blue_favourites.gif</filename>
+		<filename>images/folder_icons/folder_blue_games.gif</filename>
+		<filename>images/folder_icons/folder_blue_music.gif</filename>
+		<filename>images/folder_icons/folder_blue_paint.gif</filename>
+		<filename>images/folder_icons/folder_blue_pics.gif</filename>
+		<filename>images/folder_icons/folder_blue_settings.gif</filename>
+		<filename>images/folder_icons/folder_blue_software.gif</filename>
+		<filename>images/folder_icons/folder_blue_stuff.gif</filename>
+		<filename>images/folder_icons/folder_blue_themes.gif</filename>
+		<filename>images/folder_icons/folder_blue_video.gif</filename>
+		<filename>images/folder_icons/folder_blue_web.gif</filename>
+		<filename>images/folder_icons/folder_green.gif</filename>
+		<filename>images/folder_icons/folder_orange.gif</filename>
+		<filename>images/folder_icons/folder_red.gif</filename>
+		<filename>images/folder_icons/folder_red_settings.gif</filename>
+		<filename>images/folder_icons/folder_yellow.gif</filename>
+		<filename>images/folder_icons/folder_yellow_docs.gif</filename>
+		<filename>images/folder_icons/folder_yellow_favourites.gif</filename>
+		<filename>images/folder_icons/folder_yellow_games.gif</filename>
+		<filename>images/folder_icons/folder_yellow_music.gif</filename>
+		<filename>images/folder_icons/folder_yellow_paint.gif</filename>
+		<filename>images/folder_icons/folder_yellow_pics.gif</filename>
+		<filename>images/folder_icons/folder_yellow_settings.gif</filename>
+		<filename>images/folder_icons/folder_yellow_software.gif</filename>
+		<filename>images/folder_icons/folder_yellow_stuff.gif</filename>
+		<filename>images/folder_icons/folder_yellow_themes.gif</filename>
+		<filename>images/folder_icons/folder_yellow_video.gif</filename>
+		<filename>images/folder_icons/folder_yellow_web.gif</filename>
+		<filename>images/folder_icons/generic.png</filename>
+		<filename>images/file_icons/apple.gif</filename>
+		<filename>images/file_icons/archive.gif</filename>
+		<filename>images/file_icons/archive_gz.gif</filename>
+		<filename>images/file_icons/archive_rar.gif</filename>
+		<filename>images/file_icons/archive_tar.gif</filename>
+		<filename>images/file_icons/archive_zip.gif</filename>
+		<filename>images/file_icons/document.gif</filename>
+		<filename>images/file_icons/excel.gif</filename>
+		<filename>images/file_icons/executable.gif</filename>
+		<filename>images/file_icons/favourites.gif</filename>
+		<filename>images/file_icons/generic.png</filename>
+		<filename>images/file_icons/music1.gif</filename>
+		<filename>images/file_icons/music2.gif</filename>
+		<filename>images/file_icons/pdf1.gif</filename>
+		<filename>images/file_icons/pdf2.gif</filename>
+		<filename>images/file_icons/pdf3.gif</filename>
+		<filename>images/file_icons/pics.gif</filename>
+		<filename>images/file_icons/powerpoint.gif</filename>
+		<filename>images/file_icons/quicktime.gif</filename>
+		<filename>images/file_icons/real.gif</filename>
+		<filename>images/file_icons/stuff1.gif</filename>
+		<filename>images/file_icons/stuff2.gif</filename>
+		<filename>images/file_icons/stuff3.gif</filename>
+		<filename>images/file_icons/video.gif</filename>
+		<filename>images/file_icons/winamp.gif</filename>
+		<filename>images/file_icons/word.gif</filename>
+		<filename>images/stars/0.gif</filename>
+		<filename>images/stars/1.gif</filename>
+		<filename>images/stars/2.gif</filename>
+		<filename>images/stars/3.gif</filename>
+		<filename>images/stars/4.gif</filename>
+		<filename>images/stars/5.gif</filename>
+		<filename>images/admin/categories.png</filename>
+		<filename>images/admin/addedit.png</filename>
+		<filename>images/admin/user.png</filename>
+		<filename>images/admin/module.png</filename>
+		<filename>images/admin/config.png</filename>
+		<filename>images/admin/langmanager.png</filename>
+		<filename>images/admin/sections.png</filename>
+		<filename>images/admin/searchtext.png</filename>
+		<filename>images/admin/cpanel.png</filename>
+		<filename>images/admin/trash.png</filename>
+		<filename>images/admin/mediamanager.png</filename>
+		<filename>images/admin/dbrestore.png</filename>
+		<filename>images/admin/impressions.png</filename>
+		<filename>images/admin/credits.png</filename>
+		<filename>images/admin/support.png</filename>
+    </images>
+    <install>
+			<queries>
+			    <query>CREATE TABLE IF NOT EXISTS `#__downloads_repository` (
+  						`id` int NOT NULL,
+  						`sequence` int NOT NULL default 0,
+   						`windowtitle` varchar(255) NOT NULL default '',
+   						`keywords` varchar(255) NOT NULL default '',
+   						`version` char (10) NOT NULL default '',
+						`Use_Database` smallint NOT NULL default 1,
+ 						`tabclass` varchar(255) NOT NULL default 'sectiontableentry2,sectiontableentry1',
+						  `tabheader` varchar(255) NOT NULL default 'sectiontableheader',
+						  `headerpic` varchar(255) NOT NULL default '$mosConfig_live_site/components/com_remository/images/header.gif',
+						  `ExtsOk` varchar(255) NOT NULL default 'txt,exe,tar,gz,rar,zip,png,gif,jpg,pdf,doc',
+						  `Down_Path` varchar(255) NOT NULL default '$mosConfig_absolute_path/components/com_remository/downloads',
+						  `Up_Path` varchar(255) NOT NULL default '$mosConfig_absolute_path/components/com_remository/uploads',
+						  `Large_Text_Len` int NOT NULL default 500,
+						  `Small_Text_Len` smallint NOT NULL default 150,
+						  `Small_Image_Width` smallint NOT NULL default 100,
+						  `Small_Image_Height` smallint NOT NULL default 100,
+						  `Large_Image_Width` smallint NOT NULL default 600,
+						  `Large_Image_Height` smallint NOT NULL default 600,
+						  `MaxSize` int NOT NULL default 5000,
+						  `Max_Up_Per_Day` smallint NOT NULL default 5,
+						  `Max_Down_Per_Day` smallint NOT NULL default 5,
+						  `Max_Down_File_Day` smallint NOT NULL default 2,
+						  `Max_Up_Dir_Space` int NOT NULL default 50000,
+						  `Favourites_Max` smallint NOT NULL default 5,
+						  `Max_Thumbnails` smallint NOT NULL default 0,
+						  `Make_Auto_Thumbnail` tinyint unsigned NOT NULL default 0,
+						  `Default_Version` char (20) NOT NULL default '',
+						  `Date_Format` char (20) NOT NULL default '',
+						  `Anti_Leach` tinyint unsigned NOT NULL default 0,
+						  `Allow_Up_Overwrite` tinyint unsigned NOT NULL default 1,
+						  `Allow_User_Sub` tinyint unsigned NOT NULL default 1,
+						  `Allow_User_Edit` tinyint unsigned NOT NULL default 1,
+						  `Allow_User_Delete` tinyint unsigned NOT NULL default 0,
+						  `Allow_User_Up` tinyint unsigned NOT NULL default 1,
+						  `Enable_Admin_Autoapp` tinyint unsigned NOT NULL default 1,
+						  `Enable_User_Autoapp` tinyint unsigned NOT NULL default 0,
+						  `Allow_Comments` tinyint unsigned NOT NULL default 1,
+						  `Allow_Votes` tinyint unsigned NOT NULL default 1,
+						  `Allow_Large_Images` tinyint unsigned NOT NULL default 1,
+						  `Enable_List_Download` tinyint unsigned NOT NULL default 0,
+						  `User_Remote_Files` tinyint unsigned NOT NULL default 0,
+						  `See_Containers_no_download` tinyint unsigned NOT NULL default 1,
+						  `See_Files_no_download` tinyint unsigned NOT NULL default 1,
+						  `Send_Sub_Mail` tinyint unsigned NOT NULL default 1,
+						  `Sub_Mail_Alt_Addr` varchar(255) NOT NULL default '',
+						  `Sub_Mail_Alt_Name` varchar(100) NOT NULL default '',
+						  `Time_Stamp` varchar(15) NOT NULL default '1119386419',
+						  `download_text` text NOT NULL default '',
+						  UNIQUE KEY `id` (`id`)
+							);
+				</query>
+				<query>CREATE TABLE IF NOT EXISTS `#__downloads_files` (
+  						`id` int NOT NULL auto_increment,
+  						`sequence` int NOT NULL default 0,
+  						`windowtitle` varchar(255) NOT NULL default '',
+  						`keywords` varchar(255) NOT NULL default '',
+  						  `metatype` smallint NOT NULL default 0,
+						  `realname` varchar(255) NOT NULL default '',
+						  `realwithid` tinyint unsigned NOT NULL default 0,
+						  `islocal` tinyint unsigned NOT NULL default 1,
+						  `containerid` smallint NOT NULL default 0,
+						  `userid` int NOT NULL default 0,
+						  `filepath` varchar (255) NOT NULL default '',
+						  `filesize` varchar(255) NOT NULL default '',
+						  `filetype` varchar(255) NOT NULL default '',
+						  `filetitle` varchar(255) NOT NULL default '',
+						  `description` text NOT NULL default '',
+						  `smalldesc` text NOT NULL default '',
+						  `autoshort` tinyint unsigned NOT NULL default 1,
+						  `license` text NOT NULL default '',
+						  `licenseagree` tinyint unsigned NOT NULL default 0,
+						  `price` int NOT NULL default 0,
+						  `currency` char(3) NOT NULL default '',
+						  `downloads` int NOT NULL default 0,
+						  `url` varchar (255) NOT NULL default '',
+						  `icon` varchar(50) NOT NULL default '',
+						  `published` tinyint unsigned NOT NULL default 1,
+						  `registered` tinyint unsigned NOT NULL default 2,
+						  `userupload` tinyint unsigned NOT NULL default 3,
+						  `download_text` text NOT NULL default '',
+						  `recommended` tinyint unsigned NOT NULL default 0,
+						  `recommend_text` text NOT NULL default '',
+						  `featured` tinyint NOT NULL default 0,
+						  `featured_st_date` date NOT NULL default '0000-00-00',
+						  `featured_end_date` date NOT NULL default '0000-00-00',
+						  `featured_priority` smallint NOT NULL default 0,
+						  `featured_seq` smallint NOT NULL default 0,
+						  `featured_text` text NOT NULL default '',
+						  `opsystem` varchar (50) NOT NULL default '',
+						  `legaltype` varchar (50)NOT NULL default '',
+						  `requirements` text NOT NULL default '',
+						  `company` varchar (255) NOT NULL default '',
+						  `releasedate` date NOT NULL default '0000-00-00',
+						  `languages` text NOT NULL default '',
+						  `company_URL` varchar (255) NOT NULL default '',
+						  `translator` varchar (255) NOT NULL default '',
+						  `fileversion` varchar(50) NOT NULL default '',
+						  `fileauthor` varchar(100) NOT NULL default '',
+						  `author_URL` varchar (255) NOT NULL default '',
+						  `filedate` date NOT NULL default '0000-00-00',
+						  `filehomepage` varchar(255) NOT NULL default '',
+						  `screenurl` varchar(255) NOT NULL default '',
+						  `plaintext` tinyint unsigned NOT NULL default 0,
+						  `isblob` tinyint unsigned NOT NULL default 0,
+						  `chunkcount` int NOT NULL default 0,
+						  `groupid` smallint NOT NULL default 0,
+						  `editgroup` smallint NOT NULL default 0,
+						  `custom_1` varchar(255) NOT NULL default '',
+						  `custom_2` varchar(255) NOT NULL default '',
+						  `custom_3` text NOT NULL default '',
+						  `custom_4` int NOT NULL default 0,
+						  `custom_5` datetime NOT NULL default '0000-00-00',
+						  `oldid` int NOT NULL default 0,
+						  `submittedby` mediumint NOT NULL default 0,
+						  `submitdate` datetime NOT NULL default '0000-00-00',
+						  UNIQUE KEY `id` (`id`),
+						  KEY `filetitle` (`filetitle`),
+						  KEY `url` (`url`),
+						  KEY `containerid` (`containerid`,`published`),
+						  KEY `recommended` (`containerid`,`recommended`,`published`),
+						  KEY `featured` (`containerid`,`featured`,`published`,`featured_st_date`,`featured_end_date`),
+						  KEY `opsystem` (`containerid`,`opsystem`,`published`),
+						  FULLTEXT `words` (`filetitle`,`description`,`smalldesc`,`fileauthor`)
+							) TYPE=MyISAM;
+				</query>
+				<query>CREATE TABLE IF NOT EXISTS `#__downloads_reviews` (
+						  `id` int NOT NULL auto_increment,
+						  `sequence` int NOT NULL default 0,
+						  `windowtitle` varchar(255) NOT NULL default '',
+						  `keywords` varchar(255) NOT NULL default '',
+						  `component` varchar (255) NOT NULL default '',
+						  `itemid` int NOT NULL default 0,
+						  `userid` mediumint NOT NULL default 0,
+						  `userURL` varchar(255) NOT NULL default '',
+						  `title` varchar (255) NOT NULL default '',
+						  `comment` text NOT NULL default '',
+						  `fullreview` text NOT NULL default '',
+						  `date` datetime NOT NULL default '0000-00-00',
+						  UNIQUE KEY `id` (`id`),
+						  KEY `userid` (`component`,`itemid`,`userid`)
+							) TYPE=MyISAM;
+				</query>
+				<query>CREATE TABLE IF NOT EXISTS `#__downloads_containers` (
+						  `id` int(255) NOT NULL auto_increment,
+  						  `sequence` int NOT NULL default '0',
+  						  `windowtitle` varchar(255) NOT NULL default '',
+						  `keywords` varchar(255) NOT NULL default '',
+						  `parentid` smallint(255) NOT NULL default 0,
+						  `name` varchar(255) NOT NULL default '',
+						  `filepath` varchar(255) NOT NULL default '',
+						  `published` tinyint(1) NOT NULL default 1,
+						  `description` text NOT NULL default '',
+						  `filecount` smallint NOT NULL default 0,
+						  `foldercount` smallint NOT NULL default 0,
+						  `icon` varchar(50) NOT NULL default '',
+						  `registered` tinyint unsigned NOT NULL default 2,
+						  `userupload` tinyint unsigned NOT NULL default 3,
+						  `plaintext` tinyint unsigned NOT NULL default 0,
+						  `groupid` smallint NOT NULL default 0,
+						  `editgroup` smallint NOT NULL default 0,
+						  `adminauto` tinyint unsigned NOT NULL default 0,
+						  `userauto` tinyint unsigned NOT NULL default 0,
+						  `autogroup` smallint NOT NULL default 0,
+						  `userid` int NOT NULL default 0,
+						  UNIQUE KEY `id` (`id`),
+						  KEY `parentid` (`parentid`,`published`)
+							);
+					</query>
+						<query>CREATE TABLE IF NOT EXISTS `#__downloads_log` (
+						  `id` int NOT NULL auto_increment,
+						  `type` tinyint unsigned NOT NULL default 0,
+						  `date` datetime NOT NULL default '0000-00-00',
+						  `userid` mediumint NOT NULL default 0,
+						  `fileid` int NOT NULL default 0,
+						  `value` int NOT NULL default 0,
+						  `ipaddress` char (15) NOT NULL default '',
+							UNIQUE KEY `id` (`id`),
+							KEY `userid` (`type`,`userid`),
+							KEY `fileid` (`type`,`fileid`),
+							KEY `ipaddress` (`type`,`ipaddress`,`date`)
+							);
+						</query>
+						<query>CREATE TABLE IF NOT EXISTS `#__downloads_structure` (
+						  `id` int NOT NULL auto_increment,
+						  `container` smallint NOT NULL default 0,
+						  `item` mediumint NOT NULL default 0,
+							UNIQUE KEY `id` (`id`),
+							KEY `container` (`container`)
+							);
+						</query>
+						<query>CREATE TABLE IF NOT EXISTS `#__downloads_text` (
+						  `id` int NOT NULL auto_increment,
+						  `fileid` int NOT NULL default 0,
+						  `filetext` longtext NOT NULL,
+							UNIQUE KEY `id` (`id`),
+							KEY `fileid` (`fileid`),
+							FULLTEXT `words` (`filetext`)
+							) TYPE=MyISAM;
+						</query>
+						<query>CREATE TABLE IF NOT EXISTS `#__downloads_blob` (
+						  `id` int NOT NULL auto_increment,
+						  `fileid` int NOT NULL default 0,
+						  `chunkid` int NOT NULL default 0,
+						  `bloblength` int NOT NULL default 0,
+						  `datachunk` mediumblob NOT NULL,
+							UNIQUE KEY `id` (`id`),
+							UNIQUE KEY `filechunk` (`fileid`,`chunkid`),
+							KEY `size` (`fileid`,`bloblength`)
+							);
+						</query>
+	    				<query>CREATE TABLE IF NOT EXISTS `#__mbt_group` (
+	      					`group_id` int(11) NOT NULL auto_increment,
+	      					`group_name` text NOT NULL,
+	      					`group_description` longtext,
+	      					`group_access` tinyint(4) NOT NULL default '1',
+	       					UNIQUE KEY (`group_id`)
+		   					);
+						</query>
+	    				<query>CREATE TABLE IF NOT EXISTS `#__mbt_group_member` (
+	      					`group_id` int(11) NOT NULL,
+	      					`member_id` int(11) NOT NULL,
+		  					UNIQUE KEY `groupmember` (`group_id`,`member_id`)
+		  					);
+						</query>
+       		</queries>
+    </install>
+    <installfile>install.remository.php</installfile>
+    <uninstall>
+        <queries>
+        </queries>
+    </uninstall>
+		<administration>
+			<menu act="cpanel">Remository</menu>
+				<files>
+					<filename>admin.remository.php</filename>
+					<filename>admin.remository.html.php</filename>
+			        <filename>remository.interface.php</filename>
+					<filename>toolbar.remository.php</filename>
+					<filename>install.remository.php</filename>
+					<filename>upgrade.remository.php</filename>
+					<filename>read_me.txt</filename>
+					</files>
+				<images>
+					<filename>images/add_file.gif</filename>
+					<filename>images/edit.gif</filename>
+				</images>
+		</administration>
+</mosinstall>

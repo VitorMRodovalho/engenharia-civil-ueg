@@ -1,0 +1,341 @@
+<h1>Jobline</h1>
+
+<p>This is a component to let clients publish job postings on your website.</p>
+
+
+<h2>Requirements</h2>
+<ul>
+<li>Mambo 4.5.2.3 (untested), Joomla 1.0.x or Joomla 1.5 beta (with legacy mode)</li>
+<li>PHP 4.2.2 or above</li>
+<li>MySQL 3.23.x or MySQL 4.x</li>
+</ul>
+
+
+<h2>License</h2>
+<p>This component is released under the GNU General Public License, a copy of this license should be included in the zip file and available for reading from the administrator page once the component has been installed.</p>
+
+
+<h2>Features</h2>
+<ul>
+<li>View job openings - Users can list published job openings and sort on different fields.</li>
+<li>Post job openings - Any visitor can post job openings, but they need to be approved by admin before they are published.</li>
+<li>View internship openings - Like job openings but only for internships.</li>
+<li>Post internship opening - Post internship opening.</li>
+<li>Submit application - Users can send applications for job openings.</li>
+<li>Search job postings.</li>
+<li>SEF enabled links.</li>
+<li>All strings separated in separate language files for easy translation.</li>
+<li>Included languages: English, French, Italian, Russian, Swedish, Dutch, Spanish, Polish, Brazilian Portuguese, Norwegian, German Formal, German Informal, Portuguese, Turkish</li>
+<li>Frontend HTML is separated into admin editable template files.</li>
+<li>Possibility to have several different sets of templates.</li>
+<li>Uses the Joomla html editor for description field.</li>
+<li>Possibility to customize extra fields for job postings.</li>
+<li>Works with Joomla 1.5 beta!</li>
+</ul>
+
+
+<h2>Installation</h2>
+<p>Just install the component as according to the Joomla documentation.</p>
+
+<h2>Upgrade</h2>
+<p>Steps required to upgrade to a new version of jobline:</p>
+<ol>
+<li>Backup your database, at the very least the jos_jl_jobposting table. You will need to use a MySQL database backup utility of some kind, like phpMyAdmin, for this step. Make sure you <em>only</em> backup the data and with full insert statements.</li>
+
+<li>Make a note of your configuration options, as you will need to reset them later.</li>
+<li>Uninstall the Jobline component via Joomla administrator -> Extensions -> Install/Uninstall</li>
+<li>Install the new zip for Jobline via Joomla administrator -> Extensions -> Install/Uninstall</li>
+<li>Restore your backup of the data of the jos_jl_jobposting table using your MySQL database utility, like phpMyAdmin or MySQL Control Center.</li>
+
+<li>Go to the Jobline Configuration and reset your configuration options.</li>
+</ol>
+
+<h3>Manual Upgrade</h3>
+<p>It is also possible to upgrade without uninstalling the component, below is a description on how to do this from different versions. If you have followed the above steps you don't need to do this.</p>
+
+<h4>Step 1</h4>
+<p>Copy the files in the zip into the correct places (as shown in the jobline.xml file).</p>
+
+<h4>Step 2</h4>
+<p>You will have to follow each of the below steps from your current version up to the latest version, starting with the lowest version number and going up.</p>
+<p><b>N.B.:</b> <i>If you have changed the database prefix in Joomla, you must substitute "jos_" in all queries with your chosen database prefix.</i></p>
+
+<h5>From <span style="color: #ff0000">1.1.1</span> to <span style="color: #ff0000">1.1.2</span></h5>
+<p>This is a small maintenance update, make sure to review the configuration file and save it to make sure the new configuration options are available.</p>
+
+<h5>From <span style="color: #ff0000">1.1</span> to <span style="color: #ff0000">1.1.1</span></h5>
+<p>This is a small maintenance update, make sure to review the configuration file and save it to make sure the new configuration options are available.</p>
+
+<h5>From <span style="color: #ff0000">1.0.3</span> to <span style="color: #ff0000">1.1</span></h5>
+<p>This is a large update and requires several changes, it is not recommended to use this manual upgrade for this upgrade.</p>
+<ol>
+<li>Run the following queries in phpMyAdmin to alter the Job Posting database:
+<pre>ALTER TABLE `jos_jl_jobposting` ADD `reference` varchar(255) NOT NULL default '';</pre>
+<pre>ALTER TABLE `jos_jl_jobposting` ADD `location` varchar(255) NOT NULL default '';</pre>
+<pre>ALTER TABLE `jos_jl_jobposting` ADD `duration` varchar(255) NOT NULL default '';</pre>
+<pre>ALTER TABLE `jos_jl_jobposting` CHANGE COLUMN `usstate` `usstate` varchar(10) NOT NULL default '';</pre>
+</li>
+<li>The following queries can be used to add the List Templates sub-menu item in Administrator:
+<pre>INSERT INTO jos_components SET name='List Templates',
+ admin_menu_link='option=com_jobline&task=listtemplates',
+ admin_menu_alt='List Templates',
+ `option`='com_jobline',
+ admin_menu_img='js/ThemeOffice/template.png';</pre>
+<pre>UPDATE jos_components SET ordering = ordering+1
+ WHERE parent > 0 AND ´option`='com_jobline' AND ordering >= 2;</pre>
+<pre>SELECT parent FROM jos_components WHERE `option`='com_jobline' AND ordering=1;</pre>
+<i>Note the return value of this, as you need it for the next query.</i>
+<pre>UPDATE jos_components SET parent = <b><i>ENTER THE VALUE RETURNED FROM THE EARLIER QUERY</i></b>
+ WHERE `option`='com_jobline' AND name='List Templates';</pre>
+</li>
+</ol>
+
+<h5>From <span style="color: #ff0000">1.0.2</span> to <span style="color: #ff0000">1.0.3</span></h5>
+<ol>
+<li>No special changes needed.</li>
+</ol>
+
+<h5>From <span style="color: #ff0000">1.0 / 1.0.1</span> to <span style="color: #ff0000">1.0.2</span></h5>
+<ol>
+<li>Run the following queries in phpMyAdmin:
+<pre>ALTER TABLE `jos_jl_jobposting` ADD `jobstatus` tinyint(3) NOT NULL default '1';</pre>
+<pre>ALTER TABLE `jos_jl_jobposting` CHANGE COLUMN `creditcardexpyear` `creditcardexpyear` int(11) unsigned NOT NULL default '0';</pre>
+</li>
+</ol>
+
+<h2>Usage</h2>
+<p>Once installed you will have a new menu option called Jobline under the Components menu in the administrator page of Joomla. From this menu you can Show job postings, Approve new job postings, administer the component, read information, change the configuration, edit templates etc.</p>
+
+<h3>Frontend Usage Information</h3>
+<h4>List job postings</h4>
+<p>By default the component lists the 20 latest job postings. Uses can change the number of postings to show per page from the drop-down box above the list. If there are more published and posted jobs than the current maximum number of items to show per page there will be links to the other pages below the list of jobs. Clicking on the title of a job posting will show details of that job. Above the list are also two links, one leading to a search form and the other to add a job posting.</p>
+
+<h4>Search Job Postings</h4>
+<p>The search form includes a single search box where the user can enter a search string. This string will be searched for in the job title, description and qualifications text. This is a very simple search that only searches for the entire string. When clicking on search, a result page will show listing all jobs matching the search string. This result page looks the same as the standard job posting list except that it also includes links back to the search form.</p>
+
+<h4>Add Job Posting</h4>
+<p>Any user visiting the site may add job postings, however they will not show up on the site until they have been approved and posted by an administrator. The available fields on job postings are:</p>
+
+<h5>Item Details</h5>
+<dl>
+<dt><b>Title</b></dt>
+<dd>This will show as the title of the job. <i>(This is the only required field.)</i></dd>
+<dt><b>Reference</b></dt>
+<dd>An internal reference that the poster can use to keep track of the job.</dd>
+<dt><b>Description</b></dt>
+<dd>A long description of the job.</dd>
+</dl>
+
+<h5>Job Info</h5>
+<dl>
+<dt><b>Job Type</b></dt>
+<dd>Is this job full-time, part-time or an internship?</dd>
+<dt><b>Job Status</b></dt>
+<dd>Used to show what stage this job is in at the moment.</dd>
+<dt><b>Location</b></dt>
+<dd>Where this job is located, either enter something in the field, or choose a US state.</dd>
+<dt><b>Qualifications</b></dt>
+<dd>What are the qualifications required for this job?</dd>
+<dt><b>Compensation Range</b></dt>
+<dd>This field can be used to enter what range the compensation for this job will be.</dd>
+<dt><b>Show compensation?</b></dt>
+<dd>Should the compensation range be shown publically on the site?</dd>
+<dt><b>Duration</b></dt>
+<dd>How long this job is intended to be.</dd>
+<dt><b>How to apply</b></dt>
+<dd>Information on how to apply for this job.</dd>
+</dl>
+
+<h5>Extra Fields</h5>
+<p>The fields available under this tab can be customized by the administrator from the configuration of Jobline.</p>
+
+<h5>Contact Information</h5>
+<dl>
+<dt><b>Enter Company Name</b></dt>
+<dd>Name of the company that posts the job.</dd>
+<dt><b>Address 1</b></dt>
+<dd>First line of the company address.</dd>
+<dt><b>Address 2</b></dt>
+<dd>Second line of the company address.</dd>
+<dt><b>City</b></dt>
+<dd>City where the company is located.</dd>
+<dt><b>State</b></dt>
+<dd>The US state the company is in.</dd>
+<dt><b>Zip Code</b></dt>
+<dd>ZIP code for the company</dd>
+<dt><b>Company Website</b></dt>
+<dd>Enter the URL for the company website here.</dd>
+<dt><b>Contact Name</b></dt>
+<dd>Name of the contact at the company.</dd>
+<dt><b>Contact Phone</b></dt>
+<dd>Phone number to the contact person.</dd>
+<dt><b>Contact Email</b></dt>
+<dd>Email address to the contact person.</dd>
+<dt><b>Show Contact on Job Posting?</b></dt>
+<dd>Should contact information be shown publically on the job posting?</dd>
+<dt><b>Member ID</b></dt>
+<dd>This can be anything, can be used by the administrator to keep track of who to invoice for the job posting.</dd>
+<dt><b>Credit Card Type</b></dt>
+<dd>Select between different credit card types.</dd>
+<dt><b>Credit Card Number</b></dt>
+<dd>Enter credit card number</dd>
+<dt><b>Credit Card Expiration</b></dt>
+<dd>Enter the expiration date of the credit card.</dd>
+</dl>
+
+<p>When the information has been entered and the user clicks "Preview Job" a preview of the job posting will be shown and the user will be asked to either "Save Job Posting" or "Edit Job Posting". If the posting is saved it will be saved to the database and will show up in the "Posting Approval Queue" in the administrator page and a thankyou page will be shown. If an admin email address has been entered in the Jobline Configuration an email will be sent to this address informaing about the new job posting. If the user selects "Edit Job Posting" the job posting form will be shown again with all the information prefilled.</p>
+
+<p>It is important to always supply a contact email address, since this is the only way for the administrator to contact the poster of the job and it is also used when applications are sent through the system. If no email address is entered, no job application link will be shown when viewing this job posting.</p>
+
+<p>The three credit card fields will only be shown if the configuration option "Show Credit Card fields" has been set to Yes. If you use this you should make sure that the site runs encrypted so that no credit card information is sent in plain text over the internet. This information isn't handled in any way and if you allow these fields the administrator will have to withdraw payment manually.</p>
+
+<h4>Submit Application</h4>
+<p>When viewing a Job Posting there is a button below it called "Apply for Job", when this is clicked a application form will be shown. All data the user enters in this form will be emailed to the contact email address for the job posting when the "Send Application" button is clicked.</p>
+
+<h3>Administrator Usage Information</h3>
+<h4>Job Postings</h4>
+<p>This page shows all approved job postings, whether they are published or not. From here you can publish/unpublish job postings, add new postings and edit current job postings. This list works in the same way as the normal Joomla content editing list. To edit a job posting, click on its title or mark the checkbox and click on the "Edit" icon. To add a new job posting click on the "New" icon. Several items can be published, unpublished or deleted at the same time by marking the checkboxes next to them and clicking on the appropriate icon. To mark all checkboxes on the current page, click on the checkbox in the header field.</p>
+
+<h5>Add/Edit Job Posting</h4>
+<p>The form to Add and Edit a Job Posting works in the same way, when a job posting is edited all fields will be pre-filled with the values of that posting.</p>
+
+<p>The fields are the same as when adding a job posting from the frontend, except that there is a drop-down to select if the posting should be published or unpublished.</p>
+
+<p>When editing a job posting, it will be checked out and no other administrator user will be able to edit it until it has been saved or the cancel icon has been clicked.</p>
+
+<h4>Posting Approval Queue</h4>
+<p>When Job Postings have been published from the frontend of the site they will first show up here. </p>
+
+<p>When clicking on the title of a job the edit form will be shown where the administrator can review the posting and change anything if necessary. When everything seems to be OK click on the "Post Job" next to the job to post the job to the site. An email will be automatically sent to the contact email address of the job informing the user that the job has been posted. To reject the post and remove it from the site, click on the "Reject" link, an email will be dispatched informing about this as well.</p>
+
+<p>When a job is posted it will be automatically moved to the "Job Postings" list and show up on the frontpage.</p>
+
+<h4>List Templates</h4>
+<p>This shows a list of the available template files in the currently selected template set. To edit the contents of a template file, just click on the name of the item. It is not possible to add or remove template files, as they are used internally by the component.</p>
+
+<h5>Description of template files</h5>
+<dl>
+<dt><b>show</b></dt>
+<dd>Show a job posting.</dd>
+<dt><b>list</b></dt>
+<dd>The main job posting list.</dd>
+<dt><b>listempty</b></dt>
+<dd>What should be shown if there are no available job postings.</dd>
+<dt><b>listitem</b></dt>
+<dd>This file is called for each job posting in the list.</dd>
+<dt><b>applicationform</b></dt>
+<dd>The html of the job application form.</dd>
+<dt><b>applicationemail</b></dt>
+<dd>The application email sent out to the owner of the job posting when a user applies using the job application form.</dd>
+<dt><b>thankyou</b></dt>
+<dd>The page that is shown when a job posting has been added.</dd>
+<dt><b>search</b></dt>
+<dd>The search page.</dd>
+<dt><b>error</b></dt>
+<dd>The look of error messages.</dd>
+<dt><b>preview</b></dt>
+<dd>The preview screen when adding a job posting from the frontend.</dd>
+</dl>
+
+<h4>Edit template</h4>
+<p>When clicking on a template in the template list a page with a large text field is shown where the contents of the template file can be edited. If the template file is writeable a green "Writeable" text is shown above the field, if the system won't be able to save the template a red "Unwriteable" text is shown above the field instead. If the latter is shown you need to change the file permissions on the file shown to be able to save this template file from the administrator page. Click on the 'Save' button to save the template, or 'Cancel' to discard any changes.</p>
+
+<h4>Information</h4>
+<p>This page shows information about the component, these usage instructions, license information etc.</p>
+
+<h4>Configuration</h4>
+<p>These are a few simple configuration options to change the behavior of Jobline.</p>
+
+<dl>
+<dt><b>Name automatic emails should be sent from</b></dt>
+<dd>Email address to the administrator, if this is set emails will be sent to this address when new job postings are entered</dd>
+<dt><b>Email address automatic emails should be sent from</b></dt>
+<dd>This email address will be in the From field of all emails sent by the system. If you don't enter anything here the server default will be used.</dd>
+<dt><b>Number of items to show on each page in lists</b></dt>
+<dd>The default number of job postings to show in lists, this can be changed by the user.</dd>
+<dt><b>Sort order of items in lists</b></dt>
+<dd>The default sort order of job postings.</dd>
+<dt><b>Number of days job postings are shown (enter 0 for no limit)</b></dt>
+<dd>Job postings won't show up on the site this number of days after it was posted. If this is set to 0 all postings will show on the site until they have been specifically set to unpublished by the administrator.</dd>
+<dt><b>Terms of Service</b></dt>
+<dd>The information in this text box will be shown when adding job postings from the frontend. Enter anything you like here about the terms for submitting information to the site.</dd>
+<dt><b>Show Credit Card fields</b></dt>
+<dd>If you set this option to Yes three new fields will show up when adding and editing job postings where credit card information can be entered. This information isn't handled in any way so the administrator will have to withdraw money manually when the job is posted. Beware that this information isn't encrypted in anyway and you should not use this unless the site is encrypted.</dd>
+<dt><b>Show US State drop-down boxes</b></dt>
+<dd>Show drop-down boxes with a list of all US States for job location and company address.</dd>
+<dt><b>Select which template set to use</b></dt>
+<dd>Choose between all available template sets.</dd>
+<dt><b>Default job status</b></dt>
+<dd>Choose which value should be chosen by default in the Job Status drop-down.</dd>
+<dt><b>Use email program for applications instead of a form.</b></dt>
+<dd>Set to 'Yes' to use the application form, set to 'No' to only show an email link.</dd>
+<dt><b>Restrict who can post jobs to this access level</b></dt>
+<dd>Choose which users can post jobs from the frontend.</dd>
+<dt><b>Automatically approve posted jobs.</b></dt>
+<dd>When set to 'Yes' all jobs will be posted automatically instead of being added to the Job Posting Queue.</dd>
+<dt><b>Job postings are marked new for this number of days.</b></dt>
+<dd>If the template supports it, postings will be marked as new for this number of days.</dd>
+<dt><b>Date format</b></dt>
+<dd>How to format the dates, leave this field empty to use the default set in the current Joomla language file. Uses the syntax of the PHP function <a target="_blank" href="http://se.php.net/manual/en/function.strftime.php">strftime()</a>.</dd>
+<dt><b>Extra fields</b></dt>
+<dd>Semi-colon separated names of extra fields you want added under the "Extra Fields" tab.<br />
+<i>Example:</i><br />
+<pre>Start Date; Number of Openings</pre>
+The above will add two text fields, one with the title "Start Date" and another with the title "Number of Openings". <b>N.B.</b> When adding new fields, they have to be added to the "show" template as well before they show on job postings.</dd>
+<dt><b>Keyword categories</b></dt>
+<dd>Add groups of checkboxes in the "Extra Fields" tab, which can be used to add selectable keywords. Each group must be separated by a newline, and the title should be left of an equal ("=") sign and the names of each keyword should be to the right, separated by semi-colon.<br />
+<i>Example:</i><br />
+<pre>Required Skills=Cooking; Sowing; Rowing; Swimming
+Recommended Licenses=Driving; Flying</pre>
+This will give you two keyword categories, one called "Required Skills" and the other "Recommended Licenses", containing different keywords. When adding a new job posting, each keyword can be selected by clicking in the checkbox next to it, and all checked keywords will show up when viewing the job. <b>N.B.</b> When adding new keyword groups, they have to be added to the "show" template as well before they show on job postings.
+</dd>
+</dl>
+
+<h2>Templates</h2>
+<p>From v1.1 Jobline includes a template system for the html output of frontend pages. Two different sets of templates are included with Jobline and it's possible to switch between these from the Jobline configuration. Each template file can also be changed via the Jobline Administration. It's only possible to edit the content of template files in the currently selected template set.</p>
+
+<p>The template files are normal HTML files, but also uses functionality similar to Joomla Mambots to make it possible to show where dynamic data should be placed.</p>
+
+<h3>Available Template Mambots</h3>
+<dl>
+<dt><b>{mxtvalue=XXX}</b></dt>
+<dd>Prints the content of the variable XXX. All job database fields are added as variables, as well as some other useful values. The available variables available are different for each template file.</dd>
+<dt><b>{mxtlang=XXX}</b></dt>
+<dd>Prints the language string XXX. This can be any language string available in Joomla and Jobline.</dd>
+<dt><b>{mxtshowif=XXX} Any content {/mxtshowif}</b></dt>
+<dd>Only shows the content between opening and closing mambots if variable XXX contains a value.</dd>
+<dt><b>{mxtshowifnot=XXX} Any content {/mxtshowifnot}</b></dt>
+<dd>Shows the content if the variable XXX <i>doesn't</i> contain a value.</dd>
+</dl>
+<p><b>N.B.</b> The mxtshowif and mxtshowifnot template mambots can't be nested, as it will only work from the opening mambot to the first occurence of closing mambot.</p>
+<p>Please look at the content of the provided template files for more information on how to use this template system.</p>
+<p>Customized fields are retrieved by adding "attribs_" to the beginning of the name, so the field "Start Date" would be shown like this: {mxtvalue=attribs_Start Date}</p>
+<p>It's also possible to get configuration values, by adding "config_" in front of key name of the configuration value.</p> 
+
+
+<h2>Information</h2>
+<p>If you have any bugs to report, or want to make a feature suggestion, or just want to inform me of your site running this component you can write about it on the forums at my Joomla site which you can find at this address: <a href="http://joomla.theyard.org" target="_blank">Joomla at the Yard</a></p>
+
+<p>All components and modules I've released are available from that site so if you are looking for more Joomla extensions, feel free to visit.</p>
+
+<p>If you like this component you can encourage the development by donating a few dollars to me via PayPal on the address <a href="mailto:Olle@Johansson.com">Olle@Johansson.com</a></p>
+
+
+<h2>About the Author</h2>
+<p>This component was initially developed by Olle Johansson.<br />
+Find more Joomla extensions modules on Olle Johanssons Joomla site <a href="http://joomla.theyard.org/" target="_blank">Joomla at the Yard</a>.</p>
+
+
+<h2>Credits</h2>
+<p>Jobline was conceptualized and funded by <a href="http://www.picnet.net" target="_blank">PICnet, Inc</a>, which has graciously agreed to license it as GPL.</p>
+
+<p>The continuing development of Jobline has been sponsored by many people, without whom many of the new functions wouldn't exist.</p>
+
+<p>Those who have contributed with code or language translations need an extra special thanks. These are: Christiaan van Woudenberg for Job Status code, Jean-Christophe Boussion for French translation, Vittorio Docente for Italian translation, Alexander Kozlov for Russian translation, Dominique for Dutch translation, Cristobal Dominguez for Spanish translation, Tomasz Z. Napierala for Polish translation, Bruno Carvalho Castro Souza for Brazilian Portuguese translation, Christoph Lemmer for German formal translation, Øystein Efterdal for Norwegian translation, Helder Lopes for Portuguese translation, amarok for new German formal translation and German informal translation, Onur Bilgiç for Turkish translation.</p>
+
+<p>I'd like to thank all of the Joomla Core Developers for giving away so much of their time to develop the best CMS there is to be found on the net.</p>
+
+<p>I'd also like to thank all of those who develop components, modules, templates etc for Joomla, it's great to have such a wealth of addons to choose from.</p>
+
+<h2>Disclaimer</h2>
+<p>Neither the creator of this component, Olle Johansson, nor PICnet are responsible for the security of the data saved by this component and they are not responsible for anything that occurs through the use of this component. The component is used entirely at your own risk.</p>

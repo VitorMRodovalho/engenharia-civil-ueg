@@ -1,0 +1,57 @@
+<?xml version="1.0.1" encoding="iso-8859-1"?>
+<mosinstall type="component" version="4.5.2">
+	<name>SMF</name>
+  	<creationDate>Sept 2005</creationDate>
+  	<author>JoomlaHacks.com</author>
+  	<copyright>JoomlaHacks.com</copyright>
+  	<authorEmail>ross@i-vibe.com</authorEmail>
+  	<authorUrl>www.JoomlaHacks.com</authorUrl>
+  	<version>1.0.1</version>
+
+  	<description>This component works as a bridge between Joomla (Mambo) and SMF. It orks with default Joomla login module and Community Builder login module. This version is for Joomla 1.0.x / Mambo 4.5.2.x and SMF 1.1.x.</description>
+
+  	<files>
+    	<filename>smf.php</filename>
+    	<filename>index.html</filename>
+  	</files>
+
+  	<install>
+    	<queries>
+      		<query> INSERT INTO #__menu (menutype,name,link,type,published,parent,componentid,sublevel,ordering,checked_out,checked_out_time,pollid,browserNav,access,utaccess) VALUES ("mainmenu", "Forum", "index.php?option=com_smf", "components", 1, 0, 19, 0, 8, 0, "0000-00-00 00:00:00", 0, 0, 0, 3)
+      		</query>
+		</queries>
+  	</install>
+
+  	<uninstall>
+    	<queries>
+        	<query>DELETE FROM #__menu WHERE link="index.php?option=com_smf"</query>
+            	<query>ALTER TABLE #__core_acl_aro CHANGE `aro_id` `aro_id` INT( 11 ) NOT NULL AUTO_INCREMENT</query> 
+
+    	</queries>
+    </uninstall>
+
+    <installfile>install.smf.php</installfile>
+    <uninstallfile>uninstall.smf.php</uninstallfile>
+
+    <administration>
+    	<menu>Joomla-SMF Forum</menu>
+    	<submenu>
+    		<menu task="config">Configuration</menu>
+    	</submenu>
+	<files>
+		<filename>install.smf.php</filename>
+		<filename>admin.smf.php</filename>
+		<filename>config.smf.php</filename>
+		<filename>toolbar.smf.php</filename>
+		<filename>toolbar.smf.html.php</filename>
+		<filename>uninstall.smf.php</filename>
+		<filename>smf.class.php</filename>
+		<filename>functions.smf.php</filename>
+		<filename>rdf.php</filename>	
+    		<filename>index.html</filename>
+    		<filename>language/english.php</filename>
+    		<filename>language/index.html</filename>
+	</files>
+    </administration>
+    
+</mosinstall>

@@ -1,0 +1,107 @@
+<?xml version="1.0" encoding="iso-8859-1"?>
+<mosinstall type="module" client="administrator">
+	<name>Remository Quick Links</name>
+	<author>Benjamin Searles</author>
+	<creationDate>February 2007</creationDate>
+	<copyright>(C) 2007. All rights reserved.</copyright>
+	<license>http://www.gnu.org/copyleft/gpl.html GNU/GPL</license>
+	<authorEmail>shadal18@gmail.com</authorEmail>
+	<authorUrl></authorUrl>
+	<version>1.1.0</version>
+	<description>
+			<![CDATA[
+				<table class="adminlist">
+				<tr>
+					<th>
+						Remository Quick Links v1.1.0
+					</th>
+				</tr>
+				<tr>
+					<td>
+						<h3>An admin module to display quick links to the <a href="http://www.remository.com" target="_blank" title="Remository by Black Sheep Design" />Remository Component</a> in your backend header.</h3>
+						<h4 style="color:red;"><u>Be sure to publsih</u> Remository Quick Links module in the "header" position!&nbsp;&nbsp;<a href="index2.php?option=com_modules&amp;client=admin">(click here to publish it)</a></h4>						
+					</td>
+				</tr>
+				</table>
+			]]>
+  </description>
+	<files>
+		<filename module="mod_remositoryquicklinks">mod_remositoryquicklinks.php</filename>
+		<filename>remositoryquicklinks/rqlbg.gif</filename>
+		<filename>remositoryquicklinks/sep.gif</filename>
+	</files>
+	<params>
+		<param name="manage_containers" type="radio" default="1" label="Manage Containers" description="Display the 'Manage Containers' Quick Links Menu Item?">
+			<option value="0">No</option>
+			<option value="1">Yes</option>
+		</param>
+		<param name="manage_files" type="radio" default="1" label="Manage Files" description="Display the 'Manage Files' Quick Links Menu Item?">
+			<option value="0">No</option>
+			<option value="1">Yes</option>
+		</param>
+		<param name="manage_groups" type="radio" default="0" label="Manage Groups" description="Display the 'Manage Groups' Quick Links Menu Item?">
+			<option value="0">No</option>
+			<option value="1">Yes</option>
+		</param>
+		<param name="approve_uploads" type="radio" default="1" label="Approve Uploads" description="Display the 'Approve Uploads' Quick Links Menu Item?">
+			<option value="0">No</option>
+			<option value="1">Yes</option>
+		</param>
+		<param name="configuration" type="radio" default="0" label="Configuration" description="Display the 'Configuration' Quick Links Menu Item?">
+			<option value="0">No</option>
+			<option value="1">Yes</option>
+		</param>
+		<param name="handle_unlinked" type="radio" default="1" label="Handle Unlinked Files" description="Display the 'Handle Unlinked Files/Orphans' Quick Links Menu Item?">
+			<option value="0">No</option>
+			<option value="1">Yes</option>
+		</param>
+		<param name="bulk_add" type="radio" default="0" label="Bulk Add From Server" description="Display the 'Bulk Add' Quick Links Menu Item?">
+			<option value="0">No</option>
+			<option value="1">Yes</option>
+		</param>
+		<param name="add_structure" type="radio" default="0" label="Add Whole Structure From Server" description="Display the 'Add Whole Structure From Server' Quick Links Menu Item?">
+			<option value="0">No</option>
+			<option value="1">Yes</option>
+		</param>
+		<param name="list_missing" type="radio" default="0" label="List Missing Files" description="Display the 'List Missing Files' Quick Links Menu Item?">
+			<option value="0">No</option>
+			<option value="1">Yes</option>
+		</param>
+		<param name="recalculate_counts" type="radio" default="0" label="Recalculate File Counts" description="Display the 'Recalculate File Counts' Quick Links Menu Item?">
+			<option value="0">No</option>
+			<option value="1">Yes</option>
+		</param>
+		<param name="reset_counts" type="radio" default="0" label="Reset All Download Counts" description="Display the 'Reset All Download Counts To Zero' Quick Links Menu Item?">
+			<option value="0">No</option>
+			<option value="1">Yes</option>
+		</param>
+		<param name="remove_logs" type="radio" default="0" label="Remove Old Log Entries" description="Display the 'Remove Old Log File Entries' Quick Links Menu Item?">
+			<option value="0">No</option>
+			<option value="1">Yes</option>
+		</param>
+		<param name="check_thumbnails" type="radio" default="0" label="Check Thumbnail Integrity" description="Display the 'Check Thumbnail Integrity' Quick Links Menu Item?">
+			<option value="0">No</option>
+			<option value="1">Yes</option>
+		</param>
+		<param name="convert_320" type="radio" default="0" label="Convert Pre 3.20 Database" description="Display the 'Convert Pre 3.20 Database' Quick Links Menu Item?">
+			<option value="0">No</option>
+			<option value="1">Yes</option>
+		</param>
+		<param name="convert_340" type="radio" default="0" label="Convert Pre 3.40 Database" description="Display the 'Convert Pre 3.40 Database' Quick Links Menu Item?">
+			<option value="0">No</option>
+			<option value="1">Yes</option>
+		</param>
+		<param name="statistics" type="radio" default="1" label="Statistics" description="Display the 'Statistics' Quick Links Menu Item?">
+			<option value="0">No</option>
+			<option value="1">Yes</option>
+		</param>
+		<param name="about_remository" type="radio" default="1" label="About Remository" description="Display the 'About Remository' Quick Links Menu Item?">
+			<option value="0">No</option>
+			<option value="1">Yes</option>
+		</param>
+		<param name="support" type="radio" default="0" label="Support And Development Services" description="Display the 'Support And Development Services' Quick Links Menu Item?">
+			<option value="0">No</option>
+			<option value="1">Yes</option>
+		</param>
+	</params>
+</mosinstall>

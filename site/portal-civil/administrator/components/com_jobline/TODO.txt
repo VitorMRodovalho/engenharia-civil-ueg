@@ -1,0 +1,107 @@
+TODO
+
+Features considered for v1.2:
+* Default company contact information, so if the component is used by a single company, the contact info need not be entered for each listing (temporary fix until company and contact info has been separated)
+* add/edit job status options
+* add/edit job types
+* add/edit states
+* Ability to email the job to someone
+* Printer friendly PDF option
+* Toggle the apply for job off/on - per job
+
+
+Features considered for v1.3:
+* Company info separated from job
+* Contact info separated from job
+* Add support for MX Category if it is installed, otherwise use standard Categories
+* Start and Expiration date for job postings.
+* More advanced search form, which remembers previous search automagically. (Search fields: job status, job type, job location, date range posted etc.)
+* Filter to easily show only one type of jobs (possibly hook into the search results)
+
+
+Features considered for v2.0:
+* More advanced, and easy to use, system for customized fields.
+* Move as many fields as possible to customized system.
+* CV posting
+* CV search (with names hidden until OK'd by owner of CV)
+* Language file editor.
+* Automatic upgrade system.
+
+
+BUGS
+* After publishing several items on the Admin Job Listing, the action icons disappeared.
+
+
+Things to consider:
+* Possibly check for it to work with PHP5.
+* Toggle the send email to contact off/on per job
+* Possibly an option to set template set according to Mambo template, if a template with the same name exists.
+
+
+Not necessary anymore because of template system:
+* Config option to set size of text fields.
+* An optional introductory text block above the job listings
+
+
+<!--
+FILTERS:
+select id, title, attribs from mos_jl_jobposting where attribs RLIKE '(^|\n)Population=Popolous(\n|$)';
+-->
+
+
+Possible additions for the future:
+* Multiple categories for each job
+* Access level system so the admin can set for each user who can post jobs.
+* Improve template system so that it won't have to be called once for every list item and remove as much external code as possible.
+* Template system should have functions to easily add sets of variable, like config and attribs. e.g. addVars( $array, "config" ) which adds all items in $array and adding "config_" in front of each item.
+* Some way to easily extract which fields are available for a specific template, maybe a {mxtshowvalues} mambot that prints everything?
+* A function to create a new set of templates (possibly only enter a name, and choose a current template set to copy, to create the new directory with copies of the files from the old template).
+* Preview of the template.
+* Maybe add a css template as well.
+* Maybe a bot to add checks for required fields in forms.
+* Move as much PHP code as possible away from jobline.html.php into the appropriate functions in jobline.php.
+
+
+Feature Requests:
+
+1. to able to toggle the send email to contact off/on per job
+2. to toggle the apply for job off/on - per job
+3. To has a start date & end date that can be triggered to post the job or remove it? toggle this as well? also should not be permanent date so that the job might be reposted. 
+- Allow only registered user to post new jobs
+- Allow auto-approve of new jobs
+- Allow multiple contacts per job
+- More configuration settings for changing sender's email name (Currently, the sender is 'Nobody', and my user just delete the email because they think it is spam). 
+
+--
+
+- Allow user to create custom job offers templates (like creating a
+  form). When creating a job offer, the user would first have to specify 
+  a template name and this would load the fields he has to fill.
+
+- Allow more flexibility for application (custom application form,
+  link to a third party form i.e. ATS)
+
+- Allow configuration a job offers display (list and offer detail)
+
+Modules
+- "last X offers" or "hot jobs" (some way to push some ads forward)
+- View offers (list of categories + number of offers per category)
+   sales (2 offers)
+   accounting (3 offers)
+
+--
+
+Add Australian states:
+
+VIC Victoria
+NSW New South Wales
+SA  South Australia
+WA  Western Australia
+NT  Northern Teritory
+QLD Queensland
+TAS Tasmania
+ACT Canberra
+
+--
+
+Configurable which fields are required (primarily on the application form).

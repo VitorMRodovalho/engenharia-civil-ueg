@@ -1,0 +1,85 @@
+<?xml version="1.0" ?>
+<mosinstall type="component">
+    <name>Letterman</name>
+    <creationDate>10.02.2005</creationDate>
+    <author>Soeren Eberhardt</author>
+    <copyright>Copyright (c) 2005 Soeren Eberhardt</copyright>
+    <authorEmail>soeren@mambo-phpshop.net</authorEmail>
+    <authorUrl>www.mambo-phpshop.net</authorUrl>
+    <version>1.1</version>
+    <description>Create HTML newsletters to send to your website users.</description>
+    <files>
+        <filename>letterman.php</filename>
+        <filename>letterman.class.php</filename>
+        <filename>letterman.html.php</filename>
+    </files>
+    <images>
+        <filename>images/delete.png</filename>
+        <filename>images/subscribe.png</filename>
+        <filename>images/unsubscribe.png</filename>
+        <filename>images/user.png</filename>
+        <filename>images/user_f2.png</filename>
+    </images>
+    <install>
+      <queries>
+        <query>CREATE TABLE `#__letterman` (
+          `id` int(11) NOT NULL auto_increment,
+          `subject` varchar(50) NOT NULL default '',
+          `headers` text NOT NULL,
+          `message` text NOT NULL,
+          `html_message` text NOT NULL,
+          `published` tinyint(1) NOT NULL default '0',
+          `checked_out` int(11) NOT NULL default '0',
+          `checked_out_time` datetime NOT NULL default '0000-00-00 00:00:00',
+          `publish_up` datetime NOT NULL default '0000-00-00 00:00:00',
+          `publish_down` datetime NOT NULL default '0000-00-00 00:00:00',
+          `created` datetime NOT NULL default '0000-00-00 00:00:00',
+          `send` datetime NOT NULL default '0000-00-00 00:00:00',
+          `hits` int(11) NOT NULL default '0',
+          `access` int(11) unsigned NOT NULL default '0',
+          PRIMARY KEY  (`id`)
+        ) TYPE=MyISAM;
+        </query>
+        <query><![CDATA[INSERT INTO `#__letterman` VALUES (1, 'Sample Newsletter', '', 'Hello [NAME],\r\n\r\nthis is a nice sample Newsletter *Text Edition* from your guys at Mambo.\r\n\r\nAfter having set up this newsletter component you can easily delete or modify this Newsletter.\r\n\r\nNow please enjoy Letterman!\r\n\r\nRegards, XXX\r\n', 
+              '\r\n<p style="font-family: verdana,arial,helvetica,sans-serif;">Hello [NAME],<img width="70" vspace="5" hspace="3" height="67" border="0" align="right" src="../images/stories/asterisk.png" /></p><p style="font-family: verdana,arial,helvetica,sans-serif;">this is a nice sample Newsletter <span style="font-weight: bold;">with Graphics</span> from your guys at Mambo.</p><p style="font-weight: bold;"><br /></p><p style="font-family: verdana,arial,helvetica,sans-serif;">After having set up this newsletter component you can easily delete or modify this Newsletter.<br /></p><p style="font-weight: bold;"><span style="font-weight: normal; font-family: verdana,arial,helvetica,sans-serif;">Now please enjoy Letterman!</span><br /></p><p style="font-weight: bold;">Regards, XXX<br /></p>', 1, 0, '0000-00-00 00:00:00', '2005-02-04 00:00:00', '2007-02-23 00:00:00', '2005-02-01 15:26:02', '2005-02-07 15:42:13', 6, 0);
+        ]]></query>
+        <query>CREATE TABLE `#__letterman_subscribers` (
+          `subscriber_id` int(11) NOT NULL auto_increment,
+          `user_id` int(11) NOT NULL default '0',
+          `subscriber_name` varchar(64) NOT NULL default '',
+          `subscriber_email` varchar(64) NOT NULL default '',
+          `confirmed` tinyint(1) NOT NULL default '0',
+          `subscribe_date` datetime NOT NULL default '0000-00-00 00:00:00',
+          PRIMARY KEY  (`subscriber_id`),
+          UNIQUE KEY `subscriber_email` (`subscriber_email`)
+        ) TYPE=MyISAM;</query>
+      </queries>
+    </install>
+    <uninstall>
+      <queries>
+        <query>DROP TABLE `#__letterman`</query>
+        <query>DROP TABLE `#__letterman_subscribers`</query>
+      </queries>
+    </uninstall>
+    <administration>
+        <menu>Letterman</menu>
+        <submenu>
+          <menu >Newsletter Management</menu>
+          <menu task="subscribers">Subscriber Management</menu>
+        </submenu>
+        <files>
+            <filename>admin.letterman.php</filename>
+            <filename>admin.letterman.html.php</filename>
+            <filename>letterman.png</filename>
+            <filename>LICENSE.txt</filename>
+            <filename>README.txt</filename>
+            <filename>toolbar.letterman.php</filename>
+            <filename>toolbar.letterman.html.php</filename>
+            <filename>language/english.messages.php</filename>
+            <filename>language/dutch.messages.php</filename>
+            <filename>language/french.messages.php</filename>
+            <filename>language/germani.messages.php</filename>
+            <filename>language/germanf.messages.php</filename>
+        </files>
+    </administration>
+</mosinstall>

@@ -1,0 +1,43 @@
+<?xml version="1.0" ?>
+<mosinstall version="1.0.0" type="jcelang" lang="pt_br">
+	<name>Brazilian Portuguese</name>
+	<version>1.1</version>
+	<creationDate>2006</creationDate>
+	<author>Ricardo Vizibelli</author>
+	<authorEmail>N/A</authorEmail>
+	<authorUrl>www.nascarbrasil.com</authorUrl>
+	<copyright>Ryan Demmer</copyright>
+	<license>LGPL</license>
+	<description>Brazilian Portuguese Language files for JCE</description>
+		<files>
+		<filename language="pt_br">langs/pt_br.js</filename>
+		<filename>themes/advanced/langs/pt_br.js</filename>
+        <filename>libraries/langs/pt_br.php</filename>
+        <filename>plugins/advimage/langs/pt_br.js</filename>
+        <filename>plugins/directionality/langs/pt_br.js</filename>
+        <filename>plugins/emotions/langs/pt_br.js</filename>
+        <filename>plugins/fullscreen/langs/pt_br.js</filename>
+        <filename>plugins/htmltemplate/langs/pt_br.js</filename>
+        <filename>plugins/imgmanager/langs/pt_br.js</filename>
+        <filename>plugins/imgmanager/langs/pt_br.php</filename>
+        <filename>plugins/mediamanager/langs/pt_br.js</filename>
+        <filename>plugins/mediamanager/langs/pt_br.php</filename>
+        <filename>plugins/paste/langs/pt_br.js</filename>
+        <filename>plugins/preview/langs/pt_br.js</filename>
+        <filename>plugins/print/langs/pt_br.js</filename>
+        <filename>plugins/searchreplace/langs/pt_br.js</filename>
+        <filename>plugins/table/langs/pt_br.js</filename>
+        <filename>plugins/imgmanager/langs/pt_br.js</filename>
+        <filename>plugins/imgmanager/langs/pt_br.php</filename>
+        <filename>plugins/advlink/langs/pt_br.js</filename>
+        <filename>plugins/advlink/langs/pt_br.php</filename>
+        <filename>plugins/filemanager/langs/pt_br.js</filename>
+        <filename>plugins/filemanager/langs/pt_br.php</filename>
+        <filename>plugins/iframe/langs/pt_br.js</filename>
+	</files>
+	<administration>
+	<files>
+        <filename>pt_br.php</filename>
+	</files>
+	</administration>
+</mosinstall>

@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="iso-8859-1"?>
+<mosinstall type="module" version="1.0.1">
+	<name>Cpanel_Mail</name>
+	<author>Joomla!Minas</author>
+	<creationDate>Dezembro 2006</creationDate>
+	<copyright>Joomla!Minas. All rights reserved.</copyright>
+	<license>http://www.gnu.org/copyleft/gpl.html GNU/GPL</license>
+	<authorEmail>daniel@joomlaminas.org</authorEmail>
+	<authorUrl>www.joomlaminas.org</authorUrl>
+	<version>1.0.0</version>
+	<description>This is a simple module that allows to connect in e-mails of the Cpanel: Horde, SquirrelMail, RoundCube.</description>
+	
+	<files>
+		<filename module="mod_cpanel_mail">mod_cpanel_mail.php</filename>
+	</files>
+	<params>
+		<param name="domain" type="text" default="" label="Domains" description="If its domain will be different of $mosConfig_live_site then fills this param" />
+		<param name="port" type="text" default="" label="Port" description="If its port will be different of 2095 then fills this param" />
+		<param name="orientation" type="radio" default="0" label="Orientation" description="Orientation Vertical(default) or Horizontal">
+			<option value="0">Vertical</option>
+			<option value="1">Horizontal</option>
+		</param>
+	</params>
+</mosinstall>

@@ -1,0 +1,372 @@
+<?xml version="1.0" encoding="iso-8859-1"?>
+<mosinstall type="component">
+   <name>Simpleboard</name>
+   <creationDate>August 5th, 2005</creationDate>
+   <author>Two Shoes Mambo Factory</author>
+   <copyright>Copyright 2001-2005 TSMF and Jan de Graaff. All Rights Reserved.</copyright>
+   <authorEmail>jan@jigsnet.com</authorEmail>
+   <authorUrl>www.tsmf.net</authorUrl>
+   <version>1.1.0 Stable</version>
+   <description>Simpleboard Forum Component for Mambo 4.5.x</description>
+   <files>
+      <filename>simpleboard.php</filename>
+      <filename>avatar_upload.php</filename>
+      <filename>bb.js.php</filename>
+      <filename>faq.php</filename>
+      <filename>file_upload.php</filename>
+      <filename>flat.php</filename>
+      <filename>forum.conf</filename>
+      <filename>image_upload.php</filename>
+      <filename>latestx.php</filename>
+      <filename>listcat.php</filename>
+      <filename>moderate_messages.php</filename>
+      <filename>post.php</filename>
+      <filename>rules.php</filename>	  
+	  <filename>showcat.php</filename>
+      <filename>smile.class.php</filename>
+      <filename>sb_auth.php</filename>
+      <filename>sb_helpers.php</filename>	  
+      <filename>sb_karma.php</filename>
+      <filename>sb_layout.php</filename>
+      <filename>sb_mail.php</filename>	  	  
+	  <filename>sb_pdf.php</filename>
+      <filename>sb_search.php</filename>
+      <filename>sb_statsbar.php</filename>
+      <filename>sb_rss.php</filename>
+      <filename>search.php</filename>
+      <filename>searchbox.php</filename>
+      <filename>search-html.php</filename>
+      <filename>thread.php</filename>
+      <filename>tree-blank.gif</filename>
+      <filename>tree-end.gif</filename>
+      <filename>tree-join.gif</filename>
+      <filename>tree-vert.gif</filename>
+      <filename>userprofile.php</filename>
+      <filename>view.php</filename>
+      <filename>write.html.php</filename>
+      <filename>template/index.php</filename>
+      <filename>template/default/default_view.php</filename>
+      <filename>template/default/forum.css</filename>
+      <filename>template/d_blue/d_blue_view.php</filename>
+      <filename>template/d_blue/forum.css</filename>
+      <filename>template/tsmf/tsmf_view.php</filename>
+      <filename>template/tsmf/forum.css</filename>
+      <filename>uploaded/index.php</filename>	  
+      <filename>uploaded/files/index.php</filename>	  
+   </files>
+   <images>
+	  <filename>emoticons/angry-grey.png</filename>
+	  <filename>emoticons/angry.png</filename>
+	  <filename>emoticons/arrow.gif</filename>
+	  <filename>emoticons/blink-grey.png</filename>
+	  <filename>emoticons/blink.png</filename>
+	  <filename>emoticons/blush-grey.png</filename>
+	  <filename>emoticons/blush.png</filename>
+	  <filename>emoticons/cheerful-grey.png</filename>
+	  <filename>emoticons/cheerful.png</filename>
+	  <filename>emoticons/cool-grey.png</filename>
+	  <filename>emoticons/cool.png</filename>
+	  <filename>emoticons/default.gif</filename>
+	  <filename>emoticons/devil-grey.png</filename>
+	  <filename>emoticons/devil.png</filename>
+	  <filename>emoticons/dizzy-grey.png</filename>
+	  <filename>emoticons/dizzy.png</filename>
+	  <filename>emoticons/ermm-grey.png</filename>
+	  <filename>emoticons/ermm.png</filename>
+	  <filename>emoticons/exclam.gif</filename>
+	  <filename>emoticons/file.png</filename>
+	  <filename>emoticons/graph.gif</filename>
+	  <filename>emoticons/grin-grey.png</filename>
+	  <filename>emoticons/grin.gif</filename>
+	  <filename>emoticons/grin.png</filename>
+	  <filename>emoticons/icon_newest_reply.gif</filename>
+	  <filename>emoticons/karmaminus.gif</filename>
+	  <filename>emoticons/karmaplus.gif</filename>
+	  <filename>emoticons/kissing-grey.png</filename>
+	  <filename>emoticons/kissing.png</filename>
+	  <filename>emoticons/laughing-grey.png</filename>
+	  <filename>emoticons/laughing.png</filename>
+	  <filename>emoticons/lock.gif</filename>
+	  <filename>emoticons/love.gif</filename>
+	  <filename>emoticons/pinch-grey.png</filename>
+	  <filename>emoticons/pinch.png</filename>
+	  <filename>emoticons/pushpin.gif</filename>
+	  <filename>emoticons/question.gif</filename>
+	  <filename>emoticons/review.gif</filename>
+	  <filename>emoticons/sad-grey.png</filename>
+	  <filename>emoticons/sad.png</filename>
+	  <filename>emoticons/sb_rsspower.gif</filename>
+	  <filename>emoticons/sendpm.gif</filename>
+	  <filename>emoticons/shock.gif</filename>
+	  <filename>emoticons/shocked-grey.png</filename>
+	  <filename>emoticons/shocked.png</filename>
+	  <filename>emoticons/sick-grey.png</filename>
+	  <filename>emoticons/sick.png</filename>
+	  <filename>emoticons/sideways-grey.png</filename>
+	  <filename>emoticons/sideways.png</filename>
+	  <filename>emoticons/silly-grey.png</filename>
+	  <filename>emoticons/silly.png</filename>
+	  <filename>emoticons/smile-grey.png</filename>
+	  <filename>emoticons/smile.gif</filename>
+	  <filename>emoticons/smile.png</filename>
+	  <filename>emoticons/tongue-grey.png</filename>
+	  <filename>emoticons/tongue.png</filename>
+	  <filename>emoticons/unsure-grey.png</filename>
+	  <filename>emoticons/unsure.png</filename>
+	  <filename>emoticons/w00t-grey.png</filename>
+	  <filename>emoticons/w00t.png</filename>
+	  <filename>emoticons/wassat-grey.png</filename>
+	  <filename>emoticons/wassat.png</filename>
+	  <filename>emoticons/whistling-grey.png</filename>
+	  <filename>emoticons/whistling.png</filename>
+	  <filename>emoticons/wink-grey.png</filename>
+	  <filename>emoticons/wink.png</filename>
+	  <filename>emoticons/aim.png</filename>
+      <filename>emoticons/icq.png</filename>
+      <filename>emoticons/msn.png</filename>
+      <filename>emoticons/yahoo.png</filename>
+      <filename>avatars/index.php</filename>
+      <filename>avatars/gallery/airplane.gif</filename>
+      <filename>avatars/gallery/ball.gif</filename>
+      <filename>avatars/gallery/butterfly.gif</filename>
+      <filename>avatars/gallery/car.gif</filename>
+      <filename>avatars/gallery/dog.gif</filename>
+      <filename>avatars/gallery/duck.gif</filename>
+      <filename>avatars/gallery/fish.gif</filename>
+      <filename>avatars/gallery/frog.gif</filename>
+      <filename>avatars/gallery/guitar.gif</filename>
+      <filename>avatars/gallery/kick.gif</filename>
+      <filename>avatars/gallery/pinkflower.gif</filename>
+      <filename>avatars/gallery/redflower.gif</filename>
+      <filename>avatars/gallery/skater.gif</filename>
+      <filename>ranks/rank1.gif</filename>
+      <filename>ranks/rank2.gif</filename>
+      <filename>ranks/rank3.gif</filename>
+      <filename>ranks/rank4.gif</filename>
+      <filename>ranks/rank5.gif</filename>
+      <filename>ranks/rank6.gif</filename>
+      <filename>ranks/rankadmin.gif</filename>
+      <filename>ranks/rankmod.gif</filename>
+      <filename>ranks/rankspammer.gif</filename>
+	  <filename>graph/col10m.png</filename>
+	  <filename>graph/col11m.png</filename>
+	  <filename>graph/col12m.png</filename>
+	  <filename>graph/col1m.png</filename>
+	  <filename>graph/col2m.png</filename>
+	  <filename>graph/col3m.png</filename>
+	  <filename>graph/col4m.png</filename>
+	  <filename>graph/col5m.png</filename>
+	  <filename>graph/col6m.png</filename>
+	  <filename>graph/col7m.png</filename>
+	  <filename>graph/col8m.png</filename>
+	  <filename>graph/col9m.png</filename>
+	  <filename>uploaded/dummy.gif</filename>
+	  <filename>uploaded/dummy.png</filename>
+	  <filename>uploaded/dummy.jpg</filename>
+      <filename>uploaded/images/index.gif</filename>	  	  
+</images>
+   <install>
+      <queries>
+         <query>
+            CREATE TABLE IF NOT EXISTS `#__sb_categories` (
+              `id` int(11) NOT NULL auto_increment,
+              `parent` int(11) default '0',
+              `name` tinytext,
+              `cat_emoticon` tinyint(4) NOT NULL default '0',
+              `locked` tinyint(4) NOT NULL default '0',
+              `alert_admin` tinyint(4) NOT NULL default '0',
+              `moderated` tinyint(4) NOT NULL default '0',
+              `moderators` varchar(15) default NULL,
+              `pub_access` tinyint(4) default '1',
+              `pub_recurse` tinyint(4) default '1',
+              `admin_access` tinyint(4) default '0',
+              `admin_recurse` tinyint(4) default '1',
+              `ordering` tinyint(4) NOT NULL default '0',
+              `future2` int(11) default '0',
+              `published` tinyint(4) NOT NULL default '0',
+              `checked_out` tinyint(4) NOT NULL default '0',
+              `checked_out_time` datetime NOT NULL default '0000-00-00 00:00:00',
+              `review` tinyint(4) NOT NULL default '0',
+              `hits` int(11) NOT NULL default '0',
+              `description` text NOT NULL,
+              UNIQUE KEY `catid` (`id`),
+              KEY `catparent` (`parent`)
+            ) TYPE=MyISAM AUTO_INCREMENT =1
+         </query>
+         <query>
+            CREATE TABLE IF NOT EXISTS `#__sb_messages` (
+              `id` int(11) NOT NULL auto_increment,
+              `parent` int(11) default '0',
+              `thread` int(11) default '0',
+              `catid` int(11) NOT NULL default '0',
+              `name` tinytext,
+              `userid` int(11) NOT NULL default '0',
+              `email` tinytext,
+              `subject` tinytext,
+              `time` int(11) NOT NULL default '0',
+              `ip` varchar(15) default NULL,
+              `topic_emoticon` int(11) NOT NULL default '0',
+              `locked` tinyint(4) NOT NULL default '0',
+              `hold` tinyint(4) NOT NULL default '0',
+              `ordering` int(11) default '0',
+              `hits` int(11) default '0',
+              `moved` tinyint(4) default '0',
+              PRIMARY KEY  (`id`),
+              KEY `thread` (`thread`),
+              KEY `id` (`id`),
+              KEY `parent` (`parent`),
+              KEY `catid` (`catid`),
+              KEY `ip` (`ip`),
+              KEY `userid` (`userid`)
+            ) TYPE=MyISAM AUTO_INCREMENT=1
+         </query>
+         <query>
+            ALTER TABLE `#__sb_messages` ADD INDEX ( `time`, `hold` );
+         </query>
+         <query>
+            CREATE TABLE IF NOT EXISTS `#__sb_messages_text` (
+              `mesid` int(11) NOT NULL default '0',
+              `message` text NOT NULL,
+              UNIQUE KEY `mesid` (`mesid`)
+            ) TYPE=MyISAM
+         </query>
+         <query>
+            CREATE TABLE IF NOT EXISTS `#__sb_moderation` (
+              `catid` int(11) NOT NULL default '0',
+              `userid` int(11) NOT NULL default '0',
+              `future1` tinyint(4) default '0',
+              `future2` int(11) default '0',
+              PRIMARY KEY  (`catid`,`userid`),
+              KEY `catid` (`catid`)
+            ) TYPE=MyISAM
+         </query>
+         <query>
+            CREATE TABLE IF NOT EXISTS `#__sb_subscriptions` (
+              `thread` int(11) NOT NULL default '0',
+              `userid` int(11) NOT NULL default '0',
+              `future1` int(11) default '0',
+              KEY `thread` (`thread`),
+              KEY `userid` (`userid`)
+            ) TYPE=MyISAM
+         </query>
+         <query>
+            CREATE TABLE IF NOT EXISTS `#__sb_users` (
+              `userid` int(11) NOT NULL default '0',
+              `view` varchar(8) NOT NULL default 'flat',
+              `signature` text default NULL,
+              `moderator` int(11) default '0',
+              `ordering` int(11) default '0',
+              `posts` int(11) default '0',
+              `avatar` varchar(50) default NULL,
+              `karma` integer(11) default '0',
+              `karma_time` integer(11) default '0',
+              PRIMARY KEY  (`userid`)
+            ) TYPE=MyISAM
+         </query>
+         <query>
+         CREATE TABLE IF NOT EXISTS `#__sb_sessions` (
+           `userid` int(11) NOT NULL default '0',
+           `allowed` text,
+           `lasttime` int(11) NOT NULL default '0',
+           `readtopics` text,
+           PRIMARY KEY  (`userid`)
+         ) TYPE=MyISAM
+         </query>
+         <query>
+          CREATE TABLE IF NOT EXISTS `#__sb_attachments` (
+            `mesid` int( 11 ) NOT NULL ,
+            `filelocation` text NOT NULL
+            ) TYPE=MyISAM
+         </query>
+         <query>
+            ALTER TABLE `#__sb_attachments` ADD INDEX ( `mesid` )
+         </query>
+		 <query>
+		 	CREATE TABLE IF NOT EXISTS `#__sb_smileys` (
+			  `id` int(4) NOT NULL auto_increment,
+			  `code` varchar(12) NOT NULL default '',
+			  `location` varchar(50) NOT NULL default '',
+			  `greylocation` varchar(60) NOT NULL default '',
+			  `emoticonbar` tinyint(4) NOT NULL default '0',
+			  PRIMARY KEY  (`id`)
+			) TYPE=MyISAM AUTO_INCREMENT=1
+		</query>
+		<query>
+			TRUNCATE #__sb_smileys
+		</query>
+		<query>
+			INSERT INTO `#__sb_smileys` VALUES (1, 'B)', 'cool.png', 'cool-grey.png', 1),
+				(8, ';)', 'wink.png', 'wink-grey.png', 1),
+				(3, ':)', 'smile.png', 'smile-grey.png', 1),
+				(10, ':P', 'tongue.png', 'tongue-grey.png', 1),
+				(6, ':laugh:', 'laughing.png', 'laughing-grey.png', 1),
+				(17, ':ohmy:', 'shocked.png', 'shocked-grey.png', 1),
+				(22, ':sick:', 'sick.png', 'sick-grey.png', 1),
+				(14, ':angry:', 'angry.png', 'angry-grey.png', 1),
+				(25, ':blink:', 'blink.png', 'blink-grey.png', 1),
+				(2, ':(', 'sad.png', 'sad-grey.png', 1),
+				(16, ':unsure:', 'unsure.png', 'unsure-grey.png', 1),
+				(27, ':kiss:', 'kissing.png', 'kissing-grey.png', 1),
+				(29, ':woohoo:', 'w00t.png', 'w00t-grey.png', 1),
+				(21, ':lol:', 'grin.png', 'grin-grey.png', 1),
+				(23, ':silly:', 'silly.png', 'silly-grey.png', 1),
+				(35, ':pinch:', 'pinch.png', 'pinch-grey.png', 1),
+				(30, ':side:', 'sideways.png', 'sideways-grey.png', 1),
+				(34, ':whistle:', 'whistling.png', 'whistling-grey.png', 1),
+				(33, ':evil:', 'devil.png', 'devil-grey.png', 1),
+				(31, ':S', 'dizzy.png', 'dizzy-grey.png', 1),
+				(26, ':blush:', 'blush.png', 'blush-grey.png', 1),
+				(7, ':cheer:', 'cheerful.png', 'cheerful-grey.png', 1),
+				(18, ':huh:', 'wassat.png', 'wassat-grey.png', 1),
+				(19, ':dry:', 'ermm.png', 'ermm-grey.png', 1),
+				(4, ':-)', 'smile.png', 'smile-grey.png', 0),
+				(5, ':-(', 'sad.png', 'sad-grey.png', 0),
+				(9, ';-)', 'wink.png', 'wink-grey.png', 0),
+				(37, ':D', 'laughing.png', 'laughing-grey.png', 0),
+				(12, ':X', 'sick.png', 'sick-grey.png', 0),
+				(13, ':x', 'sick.png', 'sick-grey.png', 0),
+				(15, ':mad:', 'angry.png', 'angry-grey.png', 0),
+				(20, ':ermm:', 'ermm.png', 'ermm-grey.png', 0),
+				(24, ':y32b4:', 'silly.png', 'silly-grey.png', 0),
+				(28, ':rolleyes:', 'blink.png', 'blink-grey.png', 0),
+				(32, ':s', 'dizzy.png', 'dizzy-grey.png', 0),
+				(36, ':p', 'tongue.png', 'tongue-grey.png', 0)
+		</query>
+      </queries>
+   </install>
+   <installfile>install.simpleboard.php</installfile>
+   <uninstallfile>uninstall.simpleboard.php</uninstallfile>
+   <administration>
+      <menu>Simpleboard Forum</menu>
+      <files>
+		   <filename>language/english.php</filename>
+         <filename>admin.simpleboard.php</filename>
+         <filename>bb_adm.js</filename>
+         <filename>sb_cpanel.php</filename>
+         <filename>admin.simpleboard.html.php</filename>
+         <filename>toolbar.simpleboard.php</filename>
+         <filename>toolbar.simpleboard.html.php</filename>
+         <filename>simpleboard_config.php</filename>
+         <filename>simpleboard_mosbot_help.php</filename>
+		 <filename>sb_cpanel.php</filename>
+      </files>
+      <images>
+        <filename>images/logo.png</filename>
+        <filename>images/paypalbutton.png</filename>
+		<filename>images/sbconfig.png</filename>
+		<filename>images/sbcss.png</filename>
+		<filename>images/sbfiles.png</filename>
+		<filename>images/sbforumadm.png</filename>
+		<filename>images/sbimages.png</filename>
+		<filename>images/sbloadsample.png</filename>
+		<filename>images/sbsample.png</filename>
+		<filename>images/sbtable.png</filename>
+		<filename>images/sbtechsupport.png</filename>
+		<filename>images/sbupgrade.png</filename>
+		<filename>images/sbuser.png</filename>
+		<filename>images/sbusers.png</filename>
+		<filename>images/sbmenu.png</filename>
+		<filename>images/paypalbutton.png</filename>
+      </images>
+   </administration>
+</mosinstall>

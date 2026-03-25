@@ -1,0 +1,159 @@
+<?xml version="1.0" ?>
+<mosinstall version="1.0.11" type="component">
+  <name>Jobline</name>
+  <creationDate>26 Oct 2006</creationDate>
+  <version>1.1.2.2</version>
+  <joomlaVersion>1.0.11</joomlaVersion>
+
+  <copyright>(c) 2006 Olle Johansson</copyright>
+  <license>GNU GPL</license>
+  <licenseText>
+    This software is released under the terms and conditions of the
+    &lt;a href="http://www.gnu.org/copyleft/gpl.html"
+      target="_blank"&gt;GNU General Public License&lt;/a&gt;.
+    For more information, please see the LICENCE file accompanying
+    the installation package.
+  </licenseText>
+
+  <author>Olle Johansson</author>
+  <authorName>Olle Johansson</authorName>
+  <authorEmail>Olle@Johansson.com</authorEmail>
+  <authorUrl>http://joomla.theyard.org/</authorUrl>
+
+  <productUrl>http://joomla.theyard.org/jobline</productUrl>
+  <setupUrl>http://joomla.theyard.org/updates/</setupUrl>
+  <trackerUrl>http://forge.joomla.org/sf/tracker/do/listTrackers/projects.jobline/tracker</trackerUrl>
+
+  <description>Job posting component.</description>
+
+  <warning>
+  Warranty&lt;br /&gt;
+  This program is distributed in the hope that it will be useful, but WITHOUT ANY
+  WARRANTY; without even the implied warranty of MERCHANTABILITY or FITNESS FOR A
+  PARTICULAR PURPOSE.
+  </warning>
+
+  <credits>
+  </credits>
+
+  <files>
+    <filename>jobline.php</filename>
+    <filename>jobline.html.php</filename>
+    <filename>jobline.search.php</filename>
+    <filename>jobline.common.php</filename>
+    <filename>jobline.class.php</filename>
+    <filename>mxtemplate.php</filename>
+    <filename>language/english.php</filename>
+    <filename>language/swedish.php</filename>
+    <filename>language/french.php</filename>
+    <filename>language/dutch.php</filename>
+    <filename>language/spanish.php</filename>
+    <filename>language/polish.php</filename>
+    <filename>language/brazilian_portuguese.php</filename>
+    <filename>language/norwegian.php</filename>
+    <filename>language/russian.php</filename>
+    <filename>language/germanf.php</filename>
+    <filename>language/germani.php</filename>
+    <filename>language/portuguese.php</filename>
+    <filename>language/turkish.php</filename>
+    <filename>language/italiano.php</filename>
+    <filename>templates/index.html</filename>
+    <filename>templates/default/show.tmpl</filename>
+    <filename>templates/default/list.tmpl</filename>
+    <filename>templates/default/listempty.tmpl</filename>
+    <filename>templates/default/listitem.tmpl</filename>
+    <filename>templates/default/applicationform.tmpl</filename>
+    <filename>templates/default/applicationemail.tmpl</filename>
+    <filename>templates/default/thankyou.tmpl</filename>
+    <filename>templates/default/search.tmpl</filename>
+    <filename>templates/default/error.tmpl</filename>
+    <filename>templates/default/preview.tmpl</filename>
+    <filename>templates/simple/show.tmpl</filename>
+    <filename>templates/simple/list.tmpl</filename>
+    <filename>templates/simple/listempty.tmpl</filename>
+    <filename>templates/simple/listitem.tmpl</filename>
+    <filename>templates/simple/applicationform.tmpl</filename>
+    <filename>templates/simple/applicationemail.tmpl</filename>
+    <filename>templates/simple/thankyou.tmpl</filename>
+    <filename>templates/simple/search.tmpl</filename>
+    <filename>templates/simple/error.tmpl</filename>
+    <filename>templates/simple/preview.tmpl</filename>
+    <filename>configuration.php</filename>
+  </files>
+  <install>
+      <queries>
+         <query>
+            CREATE TABLE IF NOT EXISTS `#__jl_jobposting` (
+              `id` int(11) unsigned NOT NULL auto_increment,
+              `title` varchar(255) NOT NULL default '',
+              `jobtype` tinyint(1) unsigned NOT NULL default '0',
+              `jobstatus` tinyint(3) NOT NULL default '1',
+              `description` text NOT NULL default '',
+              `qualifications` text NOT NULL default '',
+              `compensation` text NOT NULL default '',
+              `showcomp` tinyint(1) unsigned NOT NULL default '0',
+              `applyinfo` text NOT NULL default '',
+              `company` varchar(255) NOT NULL default '',
+              `address1` varchar(255) NOT NULL default '',
+              `address2` varchar(255) NOT NULL default '',
+              `city` varchar(255) NOT NULL default '',
+              `usstate` varchar(10) NOT NULL default '',
+              `zipcode` varchar(10) NOT NULL default '',
+              `companyurl` varchar(255) NOT NULL default '',
+              `contactname` varchar(255) NOT NULL default '',
+              `contactphone` varchar(255) NOT NULL default '',
+              `contactemail` varchar(255) NOT NULL default '',
+              `showcontact` tinyint(1) unsigned NOT NULL default '0',
+              `memberid` varchar(255) NOT NULL default '',
+              `creditcardtype` tinyint(1) unsigned NOT NULL default '0',
+              `creditcardnumber` varchar(255) NOT NULL default '',
+              `creditcardexpmon` tinyint(1) unsigned NOT NULL default '0',
+              `creditcardexpyear` int(11) unsigned NOT NULL default '0',
+              `reference` varchar(255) NOT NULL default '',
+              `location` varchar(255) NOT NULL default '',
+              `duration` varchar(255) NOT NULL default '',
+              `attribs` text NOT NULL,
+              `state` tinyint(3) NOT NULL default '0',
+              `created` datetime NOT NULL default '0000-00-00 00:00:00',
+              `created_by` int(11) unsigned NOT NULL default '0',
+              `modified` datetime NOT NULL default '0000-00-00 00:00:00',
+              `modified_by` int(11) unsigned NOT NULL default '0',
+              `checked_out` tinyint(4) NOT NULL default '0',
+              `checked_out_time` datetime NOT NULL default '0000-00-00 00:00:00',
+              `hits` int(11) unsigned NOT NULL default '0',
+              `version` int(11) unsigned NOT NULL default '1',
+              `access` int(11) unsigned NOT NULL default '0',
+              `ordering` tinyint(4) NOT NULL default '0',
+              PRIMARY KEY  (`id`)
+            )
+         </query>
+      </queries>
+  </install>
+  <uninstall>
+  </uninstall>
+  <installfile>install.jobline.php</installfile>
+  <uninstallfile>uninstall.jobline.php</uninstallfile>
+  <administration>
+    <menu>Jobline</menu>
+    <submenu>
+      <menu task="list">Job Postings</menu>
+      <menu task="queue">Posting Approval Queue</menu>
+      <menu task="listtemplates">List Templates</menu>
+      <menu task="info">Information</menu>
+      <menu task="conf">Configuration</menu>
+    </submenu>
+    <files>
+      <filename>admin.jobline.php</filename>
+      <filename>admin.jobline.html.php</filename>
+      <filename>toolbar.jobline.php</filename>
+      <filename>toolbar.jobline.html.php</filename>
+      <filename>preview.php</filename>
+      <filename>footer.php</filename>
+      <filename>readme.html</filename>
+      <filename>credits.html</filename>
+      <filename>TODO.txt</filename>
+      <filename>CHANGES.txt</filename>
+      <filename>gnu_gpl.txt</filename>
+    </files>
+  </administration>
+</mosinstall>

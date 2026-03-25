@@ -1,0 +1,129 @@
+<?xml version="1.0" encoding="iso-8859-1"?>
+<mosinstall type="component">
+  <name>AkoBook</name>
+  <creationDate>28.12.2005</creationDate>
+  <author>Jorge Muneo Nakagawa</author>
+  <copyright>(C)Copyright - Jorge Muneo Nakagawa</copyright>
+  <authorEmail>muneo@joanopolis.com.br</authorEmail>
+  <authorUrl>www.joanopolis.com.br</authorUrl>
+  <version>3.45(non official)</version>
+  <description>AkoBook is a Joomla 1.0.x guestbook component. This mod was based on Akobook 3.42 by Arthur Konze (www.konze.de).</description>
+  <files>
+    <filename>akobook.php</filename>
+    <filename>offline.php</filename>
+    <filename>sub_commententry.php</filename>
+    <filename>sub_deleteentry.php</filename>
+    <filename>sub_writeentry.php</filename>
+    <filename>img.php</filename>	
+  </files>
+  <images>
+    <filename>images/aim.gif</filename>
+    <filename>images/bbbold.gif</filename>
+    <filename>images/bbcode.gif</filename>
+    <filename>images/bbemail.gif</filename>
+    <filename>images/bbimgsrc.gif</filename>
+    <filename>images/bbitalic.gif</filename>
+    <filename>images/bblistclose.gif</filename>
+    <filename>images/bblistitem.gif</filename>
+    <filename>images/bblistopen.gif</filename>
+    <filename>images/bbquote.gif</filename>
+    <filename>images/bbunderline.gif</filename>
+    <filename>images/bburl.gif</filename>
+    <filename>images/email.gif</filename>
+    <filename>images/homepage.gif</filename>
+    <filename>images/icq.gif</filename>
+    <filename>images/ip.gif</filename>
+    <filename>images/msn.gif</filename>
+    <filename>images/rate0.gif</filename>
+    <filename>images/rate1.gif</filename>
+    <filename>images/sm_bigeek.gif</filename>
+    <filename>images/sm_biggrin.gif</filename>
+    <filename>images/sm_confused.gif</filename>
+    <filename>images/sm_cool.gif</filename>
+    <filename>images/sm_cry.gif</filename>
+    <filename>images/sm_dead.gif</filename>
+    <filename>images/sm_mad.gif</filename>
+    <filename>images/sm_razz.gif</filename>
+    <filename>images/sm_rolleyes.gif</filename>
+    <filename>images/sm_sigh.gif</filename>
+    <filename>images/sm_sleep.gif</filename>
+    <filename>images/sm_smile.gif</filename>
+    <filename>images/sm_upset.gif</filename>
+    <filename>images/sm_wink.gif</filename>
+    <filename>languages/brazilian_portuguese.php</filename>
+    <filename>languages/danish.php</filename>
+    <filename>languages/dutch.php</filename>
+    <filename>languages/english.php</filename>
+    <filename>languages/estonian.php</filename>
+    <filename>languages/finnish.php</filename>
+    <filename>languages/french.php</filename>
+    <filename>languages/germani.php</filename>
+    <filename>languages/germanf.php</filename>
+    <filename>languages/greek.php</filename>
+    <filename>languages/norwegian.php</filename>
+    <filename>languages/polish.php</filename>
+    <filename>languages/portuguese.php</filename>
+    <filename>languages/romanian.php</filename>
+    <filename>languages/russian.php</filename>
+    <filename>languages/simplified_chinese.php</filename>
+    <filename>languages/spanish.php</filename>
+    <filename>languages/swedish.php</filename>
+    <filename>languages/turkish.php</filename>
+  </images>
+  <install>
+    <queries>
+      <query>DROP TABLE IF EXISTS `#__akobook`</query>
+      <query>
+        CREATE TABLE `#__akobook` (
+          `gbid` int(10) NOT NULL auto_increment,
+          `gbip` varchar(15) NOT NULL default '',
+          `gbname` varchar(20) NOT NULL default '',
+          `gbmail` varchar(60) default NULL,
+          `gbloca` varchar(50) default NULL,
+          `gbpage` varchar(150) default NULL,
+          `gbvote` int(10) default NULL,
+          `gbtext` text NOT NULL,
+          `gbdate` varchar(20) default NULL,
+          `gbcomment` text,
+          `gbedit` enum('y','n') NOT NULL default 'n',
+          `gbeditdate` datetime default NULL,
+          `published` tinyint(1) NOT NULL default '0',
+          `gbicq` varchar(20) default NULL,
+          `gbaim` varchar(20) default NULL,
+          `gbmsn` varchar(20) default NULL,
+          PRIMARY KEY  (`gbid`)
+        ) TYPE=MyISAM
+      </query>
+    </queries>
+  </install>
+  <uninstall>
+      <queries>
+      <query>DELETE FROM `#__akobook`</query>
+      <query>DROP TABLE `#__akobook`</query>
+      </queries>
+  </uninstall>
+    <installfile>install.akobook.php</installfile>
+    <uninstallfile>uninstall.akobook.php</uninstallfile>
+  <administration>
+    <menu>AkoBook</menu>
+    <submenu>
+      <menu task="view">View Items</menu>
+      <menu task="config">Edit Config</menu>
+      <menu task="language">Edit Language</menu>
+      <menu task="about">About Akobook</menu>
+    </submenu>
+    <files>
+      <filename>admin.akobook.php</filename>
+      <filename>admin.akobook.html.php</filename>
+      <filename>class.akobook.php</filename>
+      <filename>config.akobook.php</filename>
+      <filename>install.akobook.php</filename>
+      <filename>toolbar.akobook.php</filename>
+      <filename>toolbar.akobook.html.php</filename>
+      <filename>uninstall.akobook.php</filename>
+    </files>
+    <images>
+      <filename>images/logo.png</filename>
+    </images>
+</administration>
+</mosinstall>

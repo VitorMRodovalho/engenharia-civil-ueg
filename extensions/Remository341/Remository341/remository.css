@@ -1,0 +1,182 @@
+/* This is the Remository specific CSS */
+#remository, #remositoryfileinfo {
+	width:	100%;
+}
+#remositorypageheading {
+	background-repeat: no-repeat;
+	background-position:	left;
+}
+#remositorypageheading h2, #remositorypageheading h3 {
+	margin-left:	72px;
+	text-align:	left;
+	line-height:	normal;
+}
+#remositorypageheading, #remositorycredits {
+	width:		98%;
+	text-align:	left;
+	padding:	10px 10px 20px 0;
+	clear:		both;
+}
+#remositorycredits {
+	text-align:	center;
+}
+#remositorypathway img, #remositorycontainer img, #remositoryfilelisting div img, 
+#left img, #right img, #remositorycontainerlist img, #remositorypageheading h2 img,
+#remositorypageheading h3 img, #remository h4 img {
+	border:		0;
+	padding:	2px;
+}
+#remositoryfooter {
+	width:		98%;
+	padding:	10px 10px 20px 0;
+	border-top: 2px solid #999;
+	clear:		both;
+}
+#remositoryfooter #left {
+	width:	60%;
+	float:	left;
+	padding: 10px;
+}
+#remositoryfooter #right {
+	float:	left;
+	padding: 10px;
+}
+#remositorycontainerlist table {
+	width:	98%;
+	border:	0;
+}
+#remositorycontainerlist th {
+	text-align:			left;
+}
+#remositorycontainerlist h3 {
+	border-top: 1px solid #999;
+	margin:	2px;
+}
+#remositorycontainerhead {
+	width:	80%;
+}
+#remositoryfilelisting h3 {
+	float:		left;
+	clear:		both;
+	width:		98%;
+	border-top: 2px solid #999;
+	padding:	5px 0 0 5px;
+}
+#remositoryfileinfo img {
+	padding:	5px;
+	border:		0;
+}
+#remositoryplaintext {
+	clear:	left;
+	width:	99%;
+}
+#remositorythumbbox {
+	clear:	left;
+	width:	95%;
+	border-top: 1px solid #999;
+}
+.remositorythumbset a {
+	padding:	3px;
+}
+.remositorythumbset {
+	float:	left;
+	width:	65%;
+}
+.remositorycommand {
+	padding:	5px;
+	border:		1px solid red;
+	margin:		3px;
+}
+#remositorycmdbox {
+	width:		32%;
+	clear:		left;
+	float:		left;
+	text-align:	right;
+	font-weight:	bold;
+}
+#remositoryfileinfo h2 {
+	width:		95%;
+	border-top: 2px solid #999;
+	padding:	10px 0 0 5px;
+}
+.remositoryonethumb {
+	float:	right;
+	padding: 20px 20px 10px 20px;
+}
+
+/* IE hack to get round ignoring right margin */
+* html .remositoryfilesummary
+{
+	width:			100%;
+}
+.remositorypagenav {
+	clear:	both;
+	width:	100%;
+	text-align:	right;
+	padding-top:	10px;
+}
+.remositoryfilesummary dt, #remositoryfileinfo dt, #remositoryupload label, 
+#remositoryupload dt, #remositorymanycommon dt, #remositorymanycommon label,
+#remositorythumbupdate dt, #remositorythumbupdate label {
+	width: 30%;
+	float:	left;
+	clear:	left;
+	margin:	0;
+	padding:	0 0.2em 0.2em 0.2em;
+	border-top: 1px solid #999;
+	font-weight: bold;
+	text-align:	right;
+}
+
+/* commented backslash hack for mac-ie5 \*/
+dt { clear: both; }
+/* end hack */
+
+.remositoryfilesummary dd, #remositoryfileinfo dd, #remositorythumbupdate dd
+{
+	float:	left;
+	margin: 0;
+	width:	65%;
+	padding:	0 0.2em 0.2em 0.2em;
+	border-top: 1px solid #999;
+}
+.remositorydelthumb {
+	float:	left;
+	padding:	5px;
+	margin:		0;
+	text-align:	center;
+}
+/* This defines the light background colour used by Remository */
+.remositoryfilesummary dd, #remositoryuplocal, #remositoryuploadinfo, 
+#remositorymanycommon, #remositorycontainerlist th, .remositorylight {
+	background-color:	#D3D3D3;
+}
+/* This defines the dark background colour used by Remository */
+.remositorydark, #remositoryupremote {
+	background-color:	#999;
+}
+#remositoryuplocal, #remositoryuploadinfo, #remositorymanycommon {
+	padding:	8px;
+	margin:		0;
+}
+#remositoryupremote {
+	padding:	8px;
+	margin:		0;
+}
+#remositoryiconlist div, .remositorymax {
+	margin-left: 30%;
+	padding:	2px;
+}
+#remositoryiconlist img {
+	border:	0;
+}
+/* IE hack to control icons */
+* html #remositoryiconlist div
+{
+	width:			70%;
+}
+#remositoryeditor {
+	clear:	left;
+	margin-left:	10px;
+}
+/* End of the Remository specific CSS */

@@ -1,0 +1,35 @@
+<?xml version="1.0" ?>
+
+<mosinstall type="component">
+	<name>mRemository</name>
+	<creationDate>10 June 2005</creationDate>
+	<author>Martin Brampton</author>
+	<copyright>This component in released under the GNU/GPL License</copyright>
+	<authorEmail>remository@black-sheep-research.com</authorEmail>
+	<authorUrl>www.black-sheep-research.com</authorUrl>
+	<version>1.0</version>
+	<description>Manage Remository</description>
+	<files>
+		<filename>index.html</filename>
+		<filename>remository.class.php</filename>
+		<filename>com_remository_constants.php</filename>
+	</files>
+	<administration>
+	    <menu>Manage Remository</menu>
+	    <submenu>
+			<menu act="about">Instructions for use</menu>
+			<menu act="upgrade">Remove Remository ready for upgrade</menu>
+			<menu act="mode">Set Remository program file permissions</menu>
+			<menu act="killdb">Remove all Remository Database tables</menu>
+			<menu act="killdb2">Remove pre 3.20 Remository Database tables</menu>
+			<menu act="killdb3">Remove 3.20+ Remository Database tables</menu>
+			<menu act="killcomp">Remove Remository Mambo database entries</menu>
+			<menu act="killmenu">Remove Remository from Mambo menus</menu>
+			<menu act="killprogram">Remove Remository program files</menu>
+			<menu act="killdown">Remove Remository download/upload files</menu>
+		</submenu>
+		<files>
+			<filename>admin.mremository.php</filename>
+		</files>
+	</administration>
+</mosinstall>

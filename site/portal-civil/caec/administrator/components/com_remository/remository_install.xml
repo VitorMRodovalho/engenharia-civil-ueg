@@ -1,0 +1,375 @@
+<?xml version="1.0" ?>
+
+<mosinstall type="component">
+    <name>ReMOSitory</name>
+    <creationDate>10 March 2006</creationDate>
+    <author>Martin Brampton</author>
+    <copyright>This edition of Remository is released under the GNU/GPL License, copyright (c) Martin Brampton 2005</copyright>
+    <authorEmail>martin@remository.com</authorEmail>
+    <authorUrl>www.remository.com</authorUrl>
+    <version>3.25</version>
+    <description>MOS File Download Repository</description>
+    <files>
+        <filename>remository.php</filename>
+        <filename>remository.class.php</filename>
+        <filename>remository.html.php</filename>
+        <filename>remository.utilities.php</filename>
+		<filename>com_remository_settings.php</filename>
+		<filename>com_remository_startdown.php</filename>
+		<filename>com_remository_constants.php</filename>
+		<filename>language/english.php</filename>
+		<filename>language/arabic.php</filename>
+		<filename>language/bulgarian.php</filename>
+		<filename>language/czechiso.php</filename>
+		<filename>language/czech1250.php</filename>
+		<filename>language/czech.readme.txt</filename>
+		<filename>language/dutch.php</filename>
+		<filename>language/finnish.php</filename>
+		<filename>language/italian.php</filename>
+		<filename>language/lithuanian.php</filename>
+		<filename>language/norwegian.php</filename>
+		<filename>language/polish.php</filename>
+		<filename>language/portuguese.php</filename>
+		<filename>language/brazilian_portuguese.php</filename>
+		<filename>language/germani.php</filename>
+		<filename>language/germanf.php</filename>
+		<filename>language/french.php</filename>
+		<filename>language/russian.php</filename>
+		<filename>language/spanish.php</filename>
+		<filename>language/simplified_chinese.php</filename>
+		<filename>language/traditional_chinese.php</filename>
+		<filename>index.html</filename>
+    </files>
+    <images>
+        <filename>images/add_file.gif</filename>
+				<filename>images/approve.png</filename>
+				<filename>images/approve_f2.png</filename>
+				<filename>images/arrow-back.gif</filename>
+				<filename>images/download_trans.gif</filename>
+				<filename>images/upload_trans.gif</filename>
+				<filename>images/downloads.gif</filename>
+				<filename>images/edit.gif</filename>
+				<filename>images/home.gif</filename>
+				<filename>images/search.gif</filename>
+				<filename>images/header.jpg</filename>
+				<filename>images/back.png</filename>
+				<filename>images/gohome.png</filename>
+				<filename>images/tick.png</filename>
+				<filename>images/star.gif</filename>
+				<filename>images/calendar.gif</filename>
+				<filename>images/blank.gif</filename>
+				<filename>images/folder_icons/cat001.gif</filename>
+				<filename>images/folder_icons/cat002.gif</filename>
+				<filename>images/folder_icons/cgeneric.gif</filename>
+				<filename>images/folder_icons/cgeneric_open.gif</filename>
+				<filename>images/folder_icons/cgeneric.png</filename>
+				<filename>images/folder_icons/cgeneric_open.png</filename>
+				<filename>images/file_icons/acrobat.gif</filename>
+				<filename>images/file_icons/apple.gif</filename>
+				<filename>images/file_icons/eye.gif</filename>
+				<filename>images/file_icons/generic.gif</filename>
+				<filename>images/file_icons/globe.gif</filename>
+				<filename>images/file_icons/media.gif</filename>
+				<filename>images/file_icons/pic.gif</filename>
+				<filename>images/file_icons/prog.gif</filename>
+				<filename>images/file_icons/rar.gif</filename>
+				<filename>images/file_icons/winamp.gif</filename>
+				<filename>images/file_icons/windows.gif</filename>
+				<filename>images/file_icons/wrd.gif</filename>
+				<filename>images/file_icons/zip.gif</filename>
+				<filename>images/file_icons/audio.png</filename>
+				<filename>images/file_icons/quicktime.png</filename>
+				<filename>images/file_icons/tgz.png</filename>
+				<filename>images/file_icons/video.png</filename>
+				<filename>images/file_icons/wordprocessing.png</filename>
+				<filename>images/file_icons/generic.png</filename>
+				<filename>images/folder_icons/folder001.gif</filename>
+				<filename>images/folder_icons/folder002.gif</filename>
+				<filename>images/folder_icons/folder003.gif</filename>
+				<filename>images/folder_icons/folder004.gif</filename>
+				<filename>images/folder_icons/folder005.gif</filename>
+				<filename>images/folder_icons/folder006.gif</filename>
+				<filename>images/folder_icons/generic.gif</filename>
+				<filename>images/folder_icons/generic_open.gif</filename>
+				<filename>images/folder_icons/music.gif</filename>
+				<filename>images/folder_icons/generic.png</filename>
+				<filename>images/folder_icons/generic_open.png</filename>
+				<filename>images/folder_icons/folder_green.png</filename>
+				<filename>images/folder_icons/folder_green_open.png</filename>			
+				<filename>images/folder_icons/folder_html.png</filename>
+				<filename>images/folder_icons/folder_image.png</filename>
+				<filename>images/folder_icons/folder_midi.png</filename>
+				<filename>images/folder_icons/folder_sound.png</filename>
+				<filename>images/stars/0.gif</filename>
+				<filename>images/stars/1.gif</filename>
+				<filename>images/stars/2.gif</filename>
+				<filename>images/stars/3.gif</filename>
+				<filename>images/stars/4.gif</filename>
+				<filename>images/stars/5.gif</filename>
+    </images>
+    <install>
+			<queries>
+			    <query>CREATE TABLE IF NOT EXISTS `#__downloads_repository` (
+  						`id` int NOT NULL,
+  						`sequence` int NOT NULL default '0',
+   						`windowtitle` varchar(255) NOT NULL default '',
+   						`version` char (10) NOT NULL default '',
+ 						`tabclass` varchar(255) NOT NULL default 'sectiontableentry2,sectiontableentry1',
+						  `tabheader` varchar(255) NOT NULL default 'sectiontableheader',
+						  `headerpic` varchar(255) NOT NULL default '$mosConfig_live_site/components/com_remository/images/header.jpg',
+						  `ExtsOk` varchar(255) NOT NULL default 'txt,exe,tar,gz,rar,zip,png,gif,jpg,pdf,doc',
+						  `Down_Path` varchar(255) NOT NULL default '$mosConfig_absolute_path/components/com_remository/downloads',
+						  `Up_Path` varchar(255) NOT NULL default '$mosConfig_absolute_path/components/com_remository/uploads',
+						  `Large_Text_Len` int NOT NULL default '500',
+						  `Small_Text_Len` smallint NOT NULL default '150',
+						  `Small_Image_Width` smallint NOT NULL default '100',
+						  `Small_Image_Height` smallint NOT NULL default '100',
+						  `MaxSize` int NOT NULL default '5000',
+						  `Max_Up_Per_Day` smallint NOT NULL default '5',
+						  `Max_Up_Dir_Space` int NOT NULL default '50000',
+						  `Favourites_Max` smallint NOT NULL default '5',
+						  `Default_Version` char (20) NOT NULL default '',
+						  `Date_Format` char (20) NOT NULL default '',
+						  `Anti_Leach` tinyint unsigned NOT NULL default '0',
+						  `Allow_Up_Overwrite` tinyint unsigned NOT NULL default '1',
+						  `Allow_User_Sub` tinyint unsigned NOT NULL default '1',
+						  `Allow_User_Edit` tinyint unsigned NOT NULL default '1',
+						  `Allow_User_Up` tinyint unsigned NOT NULL default '1',
+						  `Enable_Admin_Autoapp` tinyint unsigned NOT NULL default '1',
+						  `Enable_User_Autoapp` tinyint unsigned NOT NULL default '0',
+						  `Allow_Comments` tinyint unsigned NOT NULL default '1',
+						  `Allow_Votes` tinyint unsigned NOT NULL default '1',
+						  `Enable_List_Download` tinyint unsigned NOT NULL default '0',
+						  `User_Remote_Files` tinyint unsigned NOT NULL default '0',
+						  `See_Containers_no_download` tinyint unsigned NOT NULL default '1',
+						  `See_Files_no_download` tinyint unsigned NOT NULL default '1',
+						  `Send_Sub_Mail` tinyint unsigned NOT NULL default '1',
+						  `Sub_Mail_Alt_Addr` varchar(255) NOT NULL default '',
+						  `Sub_Mail_Alt_Name` varchar(100) NOT NULL default '',
+						  `Time_Stamp` varchar(15) NOT NULL default '1119386419',
+						  UNIQUE KEY `id` (`id`)
+							) TYPE=MyISAM;
+				</query>
+				<query>CREATE TABLE IF NOT EXISTS `#__downloads_files` (
+  						`id` int NOT NULL auto_increment,
+  						`sequence` int NOT NULL default '0',
+  						`windowtitle` varchar(255) NOT NULL default '',
+						  `realname` varchar(255) NOT NULL default '',
+						  `islocal` tinyint unsigned NOT NULL default '1',
+						  `containerid` smallint NOT NULL default '0',
+						  `filepath` varchar (255) NOT NULL default '',
+						  `filesize` varchar(255) NOT NULL default '',
+						  `filetype` varchar(255) NOT NULL default '',
+						  `filetitle` varchar(255) NOT NULL default '',
+						  `description` text NOT NULL default '',
+						  `smalldesc` text NOT NULL default '',
+						  `autoshort` tinyint unsigned NOT NULL default '1',
+						  `license` text NOT NULL default '',
+						  `licenseagree` tinyint unsigned NOT NULL default '0',
+						  `price` int NOT NULL default '0',
+						  `currency` char(3) NOT NULL default '',
+						  `downloads` int NOT NULL default '0',
+						  `url` varchar (255) NOT NULL default '',
+						  `icon` varchar(50) NOT NULL default '',
+						  `published` tinyint unsigned NOT NULL default '1',
+						  `registered` tinyint unsigned NOT NULL default '2',
+						  `userupload` tinyint unsigned NOT NULL default '3',
+						  `recommended` tinyint unsigned NOT NULL default '0',
+						  `recommend_text` text NOT NULL default '',
+						  `featured` tinyint NOT NULL default '0',
+						  `featured_st_date` date NOT NULL default '2000-01-01',
+						  `featured_end_date` date NOT NULL default '2000-01-01',
+						  `featured_priority` smallint NOT NULL default '0',
+						  `featured_seq` smallint NOT NULL default '0',
+						  `featured_text` text NOT NULL default '',
+						  `opsystem` varchar (50) NOT NULL default '',
+						  `legaltype` varchar (50)NOT NULL default '',
+						  `requirements` text NOT NULL default '',
+						  `company` varchar (255) NOT NULL default '',
+						  `releasedate` date NOT NULL default '1000-01-01',
+						  `languages` text NOT NULL default '',
+						  `company_URL` varchar (255) NOT NULL default '',
+						  `translator` varchar (255) NOT NULL default '',
+						  `fileversion` varchar(50) NOT NULL default '',
+						  `fileauthor` varchar(100) NOT NULL default '',
+						  `author_URL` varchar (255) NOT NULL default '',
+						  `filedate` datetime NOT NULL default '2000-01-01 00:00:00',
+						  `filehomepage` varchar(255) NOT NULL default '',
+						  `screenurl` varchar(255) NOT NULL default '',
+						  `plaintext` tinyint unsigned NOT NULL default '0',
+						  `isblob` tinyint unsigned NOT NULL default '0',
+						  `groupid` smallint NOT NULL default '0',
+						  `submittedby` mediumint NOT NULL default '0',
+						  `submitdate` datetime NOT NULL default '2000-01-01 00:00:00',
+						  UNIQUE KEY `id` (`id`),
+						  KEY `filetitle` (`filetitle`),
+						  KEY `realname` (`realname`),
+						  KEY `url` (`url`),
+						  KEY `containerid` (`containerid`,`published`),
+						  KEY `recommended` (`containerid`,`recommended`,`published`),
+						  KEY `featured` (`containerid`,`featured`,`published`,`featured_st_date`,`featured_end_date`),
+						  KEY `opsystem` (`containerid`,`opsystem`,`published`),
+						  FULLTEXT (`filetitle`,`description`,`smalldesc`,`fileauthor`)
+							) TYPE=MyISAM;
+				</query>
+				<query>CREATE TABLE IF NOT EXISTS `#__downloads_reviews` (
+						  `id` int NOT NULL auto_increment,
+						  `sequence` int NOT NULL default '0',
+						  `windowtitle` varchar(255) NOT NULL default '',
+						  `component` varchar (255) NOT NULL default '',
+						  `itemid` int NOT NULL default '0',
+						  `userid` mediumint NOT NULL default '0',
+						  `userURL` varchar(255) NOT NULL default '',
+						  `title` varchar (255) NOT NULL default '',
+						  `comment` text NOT NULL default '',
+						  `fullreview` text NOT NULL default '',
+						  `date` datetime NOT NULL default '2000-01-01 00:00:00',
+						  UNIQUE KEY `id` (`id`),
+						  KEY `userid` (`component`,`itemid`,`userid`)
+							) TYPE=MyISAM;
+				</query>
+				<query>CREATE TABLE IF NOT EXISTS `#__downloads_containers` (
+						  `id` int(255) NOT NULL auto_increment,
+  						  `sequence` int NOT NULL default '0',
+  						  `windowtitle` varchar(255) NOT NULL default '',
+						  `parentid` smallint(255) NOT NULL default '0',
+						  `name` varchar(255) NOT NULL default '',
+						  `filepath` varchar(255) NOT NULL default '',
+						  `published` tinyint(1) NOT NULL default '1',
+						  `description` text NOT NULL default '',
+						  `filecount` smallint NOT NULL default '0',
+						  `foldercount` smallint NOT NULL default '0',
+						  `icon` varchar(50) NOT NULL default '',
+						  `registered` tinyint unsigned NOT NULL default '2',
+						  `userupload` tinyint unsigned NOT NULL default '3',
+						  `plaintext` tinyint unsigned NOT NULL default '0',
+						  `groupid` smallint NOT NULL default '0',
+						  UNIQUE KEY `id` (`id`),
+						  KEY `parentid` (`parentid`,`published`)
+							) TYPE=MyISAM;
+					</query>
+					<query>CREATE TABLE IF NOT EXISTS `#__downloads_temp` (
+  						`id` int NOT NULL auto_increment,
+  						`sequence` int NOT NULL default '0',
+  						`windowtitle` varchar(255) NOT NULL default '',
+						  `filetempname` varchar(255) NOT NULL default '',
+						  `filetemphash` varchar (255) NOT NULL default '',
+						  `oldid` int NOT NULL default '0',
+						  `filename` varchar(255) NOT NULL default '',
+						  `realname` varchar(255) NOT NULL default '',
+						  `islocal` tinyint unsigned NOT NULL default '1',
+						  `containerid` smallint NOT NULL default '0',
+						  `filepath` varchar (255) NOT NULL default '',
+						  `filesize` varchar(255) NOT NULL default '',
+						  `filetype` varchar(255) NOT NULL default '',
+						  `filetitle` varchar(255) NOT NULL default '',
+						  `description` text NOT NULL default '',
+						  `smalldesc` text NOT NULL default '',
+						  `autoshort` tinyint unsigned NOT NULL default '1',
+						  `license` text NOT NULL default '',
+						  `licenseagree` tinyint unsigned NOT NULL default '0',
+						  `price` int NOT NULL default '0',
+						  `currency` char(3) NOT NULL default '',
+						  `downloads` int NOT NULL default '0',
+						  `url` varchar (255) default '',
+						  `icon` varchar(50) NOT NULL default '',
+						  `published` tinyint NOT NULL default '1',
+						  `registered` tinyint unsigned NOT NULL default '2',
+						  `userupload` tinyint unsigned NOT NULL default '3',
+						  `recommended` tinyint NOT NULL default '0',
+						  `recommend_text` text NOT NULL default '',
+						  `featured` tinyint NOT NULL default '0',
+						  `featured_st_date` date NOT NULL default '2000-01-01',
+						  `featured_end_date` date NOT NULL default '2000-01-01',
+						  `featured_priority` smallint NOT NULL default '0',
+						  `featured_seq` smallint NOT NULL default '0',
+						  `featured_text` text NOT NULL default '',
+						  `opsystem` varchar (50) NOT NULL default '',
+						  `legaltype` varchar (50)NOT NULL default '',
+						  `requirements` text NOT NULL default '',
+						  `company` varchar (255) NOT NULL default '',
+						  `releasedate` date NOT NULL default '1000-01-01',
+						  `languages` text NOT NULL default '',
+						  `company_URL` varchar (255) NOT NULL default '',
+						  `translator` varchar (255) NOT NULL default '',
+						  `fileversion` varchar(50) NOT NULL default '',
+						  `fileauthor` varchar(100) NOT NULL default '',
+						  `author_URL` varchar (255) NOT NULL default '',
+						  `filedate` datetime NOT NULL default '2000-01-01 00:00:00',
+						  `filehomepage` varchar(255) NOT NULL default '',
+						  `screenurl` varchar(255) NOT NULL default '',
+						  `plaintext` tinyint unsigned NOT NULL default '0',
+						  `isblob` tinyint unsigned NOT NULL default '0',
+						  `groupid` smallint NOT NULL default '0',
+						  `submittedby` mediumint NOT NULL default '0',
+						  `submitdate` datetime NOT NULL default '2000-01-01 00:00:00',
+						  	  UNIQUE KEY `id` (`id`),
+							  KEY `filetempname` (`filetempname`)
+							) TYPE=MyISAM;
+						</query>
+						<query>CREATE TABLE IF NOT EXISTS `#__downloads_log` (
+						  `id` int NOT NULL auto_increment,
+						  `type` tinyint unsigned NOT NULL default '0',
+						  `date` datetime NOT NULL default '2000-01-01 00:00:00',
+						  `userid` mediumint NOT NULL default '0',
+						  `fileid` int NOT NULL default '0',
+						  `value` int NOT NULL default '0',
+						  `ipaddress` char (15) NOT NULL default '',
+							UNIQUE KEY `id` (`id`),
+							KEY `userid` (`type`,`userid`),
+							KEY `fileid` (`type`,`fileid`),
+							KEY `ipaddress` (`type`,`ipaddress`,`date`)
+							) TYPE=MyISAM;
+						</query>
+						<query>CREATE TABLE IF NOT EXISTS `#__downloads_structure` (
+						  `id` int NOT NULL auto_increment,
+						  `container` smallint NOT NULL default '0',
+						  `item` mediumint NOT NULL default '0',
+							UNIQUE KEY `id` (`id`),
+							KEY `container` (`container`)
+							) TYPE=MyISAM;
+						</query>
+       </queries>
+    </install>
+    <installfile>install.remository.php</installfile>
+    <uninstall>
+        <queries>
+        </queries>
+    </uninstall>
+		<administration>
+			<menu>ReMOSitory</menu>
+				<submenu>
+					<menu act="showcats">Show Categories</menu>
+					<menu act="showfolders">Show Folders</menu>
+					<menu act="showfiles">Show Files</menu>
+					<menu act="approve">Approve Uploads</menu>
+					<menu act="resetfilecounts">Recalculate File Counts</menu>
+					<menu act="resetdownloads">Reset Download Counts</menu>
+					<menu act="orphans">Handle Unlinked Files</menu>
+					<menu act="missing">List Missing Files</menu>
+					<menu act="remosconfig">Configuration</menu>
+					<menu act="stats">ReMOSitory Stats</menu>
+					<menu act="dbconvert">Convert pre 3.2 Database</menu>
+					<menu act="about">About ReMOSitory</menu>
+				</submenu>
+				<files>
+					<filename>toolbar.remository.html.php</filename>
+					<filename>admin.remository.php</filename>
+					<filename>admin.remository.html.php</filename>
+					<filename>toolbar.remository.php</filename>
+					<filename>read_me.txt</filename>
+				</files>
+				<images>
+					<filename>images/add_file.gif</filename>
+					<filename>images/approve.gif</filename>
+					<filename>images/calc.gif</filename>
+					<filename>images/delete.gif</filename>
+					<filename>images/del_file.gif</filename>
+					<filename>images/del_folder.gif</filename>
+					<filename>images/downloads.gif</filename>
+					<filename>images/edit.gif</filename>
+					<filename>images/move_file.gif</filename>
+					<filename>images/orphans.gif</filename>
+				</images>
+		</administration>
+</mosinstall>
